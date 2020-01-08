@@ -1,4 +1,4 @@
-
+## usersテーブル
 |Column         |Type     |Options                   |
 |---------------|---------|---------------           |
 |nickname       |string   |null: false, unique: true, index: true
@@ -12,9 +12,7 @@
 |icon           |string
 |introduction   |text
 |proceed        |integer  |null: false
-|bought_items   |reference|null: false, foreign_key: true
-|selling_items  |reference|null: false, foreign_key: true
-|sold_items     |reference|null: false, foreign_key: true
+
 ### Association
 - has_many :buyed_items, foreign_key: “buyer_id”, class_name: “Item”
   has_many :saling_items, -> { where(“buyer_id is NULL”) }, foreign_key: “saler_id”, class_name: “Item”
@@ -32,8 +30,49 @@
 |shipping_date |string   |null: false|
 |category      |string   |null: false|
 |price         |integer  |null: false|
+|brand         |string   |
 |saler_id      |reference|null: false, foreign_key: true|
 |buyer_id      |reference|null: false, foreign_key: true|
 ### Association  
 - belongs_to :saler, class_name: "User"
 - belongs_to :buyer, class_name: "User"
+
+## imagesテーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|image         |string   |null: false|
+|item_id       |reference|null: false, foreign_key: true|
+### Association 
+- belongs_to :items
+
+
+## categoriesテーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|name          |string   |null: false|
+### Association 
+- has_many :second_categories
+- belongs_to :items 
+
+
+## second_categoriesテーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|name          |string   |null: false|
+|parent_id     |integer  |null: false, foreign_key: true|
+### Association 
+- belongs_to :categories
+- has_many :third_categories
+
+## third_categories3テーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|name          |string   |null: false|
+|parent_id     |integer  |null: false, foreign_key: true|
+### Association 
+- belongs_to :second_categories
+
+
+
+
+
