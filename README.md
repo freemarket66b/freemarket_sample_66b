@@ -54,6 +54,23 @@
 - has_many :items
 - has_ancestry
 
+### Option
+・ancestry をgemでインストールする。
+
+
+## creditsテーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|card_number   |integer  |null: false|
+|card_month    |integer  |null: false|
+|card_year     |integer  |null: false|
+|security_code |integer  |null: false|
+|user          |integer  |null: false, foreign_key:true|
+
+### Association
+- belongs_to :user
+
+
 
 
 
