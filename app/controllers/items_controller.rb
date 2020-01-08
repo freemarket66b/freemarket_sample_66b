@@ -10,5 +10,8 @@ end
   def create
   end
 
+  def show
+  end
+
   def 
 end
