@@ -23,12 +23,11 @@
 |id            |string   |null: false|
 |name          |string   |null: false, index: true|
 |explanation   |string   |null: false|
-|image         |string   |null: false|
-|status        |string   |null: false|
-|postage       |string   |null: false|
-|region        |string   |null: false|
-|shipping_date |string   |null: false|
-|category      |string   |null: false|
+|status        |integer  |null: false|
+|delivery_type |integer  |null: false|
+|postage       |integer  |null: false|
+|region        |integer  |null: false|
+|shipping_date |integer  |null: false|
 |price         |integer  |null: false|
 |brand         |string   |
 |saler_id      |reference|null: false, foreign_key: true|
@@ -43,34 +42,17 @@
 |image         |string   |null: false|
 |item_id       |reference|null: false, foreign_key: true|
 ### Association 
-- belongs_to :items
+- belongs_to :item
 
 
 ## categoriesテーブル
 |Column        |Type     |Options    |
 |--------------|---------|-----------|
+|ancestry      |string   |
 |name          |string   |null: false|
 ### Association 
-- has_many :second_categories
-- belongs_to :items 
-
-
-## second_categoriesテーブル
-|Column        |Type     |Options    |
-|--------------|---------|-----------|
-|name          |string   |null: false|
-|parent_id     |integer  |null: false, foreign_key: true|
-### Association 
-- belongs_to :categories
-- has_many :third_categories
-
-## third_categories3テーブル
-|Column        |Type     |Options    |
-|--------------|---------|-----------|
-|name          |string   |null: false|
-|parent_id     |integer  |null: false, foreign_key: true|
-### Association 
-- belongs_to :second_categories
+- has_many :items
+- has_ancestry
 
 
 
