@@ -1,2 +1,45 @@
 .header
+  .header__logo
+    ここにロゴとリンクが入る
+.content
+  = form_for @item, local: true do |form|
+    .content__itemInfo
+      商品情報入力
+    .content__itemImage
+      .content__iteminfo__title
+        出品画像
+        %span
+          必須
+      %p
+        最大10枚までアップロードできます
+      .content__itemInfo__imagebox
+        = form.file_field :image
+    .content__itemNameAndExplanation
+      = form.label :nameOfItemName, "商品名"
+      = form.text_field :nameOfItemName
+    .content__itemDetail
+      = form.label :explanationOfItem "商品の説明"
+      = form.text_area :explanationOfItem
+      .content__itemDetail__title
+        商品の詳細
+      .content__itemDtail__formBox
+        = form.label :category
+        %span
+          必須
+        = form.select :category
+    .content__itemShipping
+      .content__itemShipping__title
+        配送について
+      .content__itemShipping__formBox
+    .content__itemPrice
+      .content__itemPrice__title
+      販売価格
+      .content__itemPrice__formBox
+    .content__itemSubmitAndBack
+      .content__itemSubmitAndBack__confirmation
+      .content__itemSubmitAndBack__submit
+      .content__itemSubmitAndBack__back
+.footer
+  プライバシーポリシー  メルカリ利用規約  特定商取引に関する表記
+
   
