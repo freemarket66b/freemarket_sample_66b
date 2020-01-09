@@ -1,3 +1,16 @@
 @import "reset";
 @import "items/new.scss";
 @import "items/show.scss";
+@import "./user";
+@import "./addresses";
+@import "modules/signup";
+@import "modules/signin";
+@import "modules/devise_footer";
+@import "modules/devise_common";
+@import "modules/input-common";
+@import "modules/trade_index";
+@import "modules/trade_new";
+
+* {
+  box-sizing: border-box;
+}
