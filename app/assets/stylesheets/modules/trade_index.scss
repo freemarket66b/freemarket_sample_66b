@@ -1,0 +1,166 @@
+.responsive-bar {
+  float: left;
+  margin: 0 40px 0 0;
+  & h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.trade-container {
+  width: 1020px;
+  margin: 40px auto 0;
+  padding: 0 0 40px;
+  &__info {
+  width: 280px;
+  background-color: #fff;
+  margin: 8px 0 0;
+    & dt {
+      display: inline-block;
+      width: 35%;
+      margin: 0;
+      padding: 16px;
+    }
+    & dd {
+      display: inline-block;
+      width: 60%;
+      margin: 0;
+    }
+  }
+  &__figure {
+    display: block;
+    margin: 40px 0 0;
+  }
+  &__info.trade-figure {
+    padding: 16px;
+    & figcaption {
+      font-weight: 600;
+    }
+  }
+  &__content {
+    float: right;
+    width: 700px;
+    background-color: #fff;
+    & h2 {
+      text-align: center;
+      font-size: 24px;
+      padding: 8px 24px;
+      font-weight: 600;
+    }
+    &__messages {
+      padding: 24px;
+      & p {
+      	display: inline-block;
+      }
+      & a {
+        color: #0099e8;
+      }
+      & li:first-child {
+        margin: 1.5em 0 0;
+      }
+      & li {
+        margin: 60px 0 0;
+      }
+    }
+  }
+}
+
+.alert {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  background: #fff6de;
+}
+
+.trade-buyer {
+  position: relative;
+  &__icon {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -20px;
+  }
+  &__comment {
+    float: left;
+    position: relative;
+    width: calc(100% - 56px);
+    padding: 16px;
+    background: #fbf0e6;
+    border-radius: 15px;
+    line-height: 1.5;
+    word-break: break-all;
+  }
+	&__nickname {
+    width: 600px;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    left: auto;
+    font-weight: 600;
+    top: -20px;
+    right: 56px;
+    max-width: 100%;
+    min-width: 214px;
+    height: 1.2em;
+    white-space: nowrap;
+  }
+}
+
+.trade-seller {
+  &_comment {
+    float: right;
+    position: relative;
+    width: calc(100% - 56px);
+    padding: 16px;
+    background: #eef0f4;
+    border-radius: 15px;
+    line-height: 1.5;
+    word-break: break-all;
+	}
+  &_nickname {
+    width: 600px;
+    max-width: 100%;
+    min-width: 214px;
+    height: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: 56px;
+    left: auto;
+    text-align: left;
+  }
+}
+
+#tradecomment_comment {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  padding: 10px;
+  margin: 8px 0 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#tradecomment_submit {
+  display: block;
+  line-height: 48px;
+  width: 100%;
+  margin: 8px 0 0;
+  font-size: 14px;
+  text-align: center;
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+}
+
+.clearfix:after {
+  clear: both;
+}
