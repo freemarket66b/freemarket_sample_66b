@@ -1,0 +1,17 @@
+.header{
+  background-color: white;
+  height: 100px;
+  width: 100%;
+}
+
+.contents{
+  background-color: yellow;
+  height: calc(100% - 100px -390px);
+  width: 100%;
+}
+
+.footer{
+  background-color: black;
+  height: 390px;
+  width: 100%;
+}
