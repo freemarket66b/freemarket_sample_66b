@@ -1,0 +1,53 @@
+.trade-complete {
+  width: 700px;
+  &__message {
+    background-color: #fff6de;
+    &_box {
+      color: #ea352d;
+      font-weight: bold;
+      text-align: center;
+      & span {
+        font-size: 16px;
+      }
+    }
+    &_text {
+      text-align: center;
+    }
+  }
+  &__box {
+    margin: 40px 0 0;
+    padding: 24px 12.5% 0;
+    border-top: 1px solid #f5f5f5;
+    &__item {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    &__price {
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &__address {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    &__method {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    &__flow {
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__box.item-info {
+    padding: 24px 12.5% 0;
+    border-top: 1px solid #f5f5f5;
+  }
+  &_link {
+    display: block;
+    margin: 16px 0 0;
+    color: #0099e8;
+  }
+}
