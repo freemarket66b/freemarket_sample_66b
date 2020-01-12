@@ -1,0 +1,25 @@
+.z
+  = render "devise/shared/header-login"
+  .main
+    .main-box
+      .main-box-block
+        .main-top-text
+          新規会員登録
+        .main-bottom
+          .main-bottom-box
+            %ul.main-bottom-box__textBox-mail
+              = link_to signup2_signup_index_path, class:'link-mail' do
+                =fa_icon 'envelope'
+                %li.text
+                  メールアドレスで登録する
+            %ul.main-bottom-box__textBox-facebook
+              = link_to user_facebook_omniauth_authorize_path, class:'link-fb' do
+                =fa_icon 'facebook-square'
+                %li.text
+                  Facebookで登録する
+            %ul.main-bottom-box__textBox-google
+              = link_to user_google_oauth2_omniauth_authorize_path do
+                =fa_icon 'google'
+                %li.text
+                  Googleで登録する
+  = render "devise/shared/footer-login"

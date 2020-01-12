@@ -4,17 +4,38 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string  :nickname,           null: false, unique: true, index: true
-      t.string  :email,              null: false
-      t.string  :password,           null: false
-      t.string  :last_name,          null: false
-      t.string  :first_name,         null: false
-      t.string  :last_name_kana,     null: false
-      t.string  :first_name_kana,    null: false
-      t.string  :icon
-      t.date    :birthday_info,      null: false
-      t.text    :introduction
-      t.integer :proceed,            null: false
+      t.string :email,              null: false, default: ""
+      t.string :name,               null: false, default: ""
+      t.string :encrypted_password, null: false, default: ""
+      t.string :nickname,           null: false, default: ""
+      t.string :phone_number,       null: false
+      t.string :prefectures,        null: false
+      t.string :city,               null: false
+      t.string :address,            null: false
+      t.string :postal_code,        null: false
+      t.string :building_name
+      t.integer :birth_year,        null: false
+      t.integer :birth_month,       null: false
+      t.integer :birth_day,         null: false
+      t.string :first_name,         null: false
+      t.string :first_name_kana,    null: false
+      t.string :last_name,          null: false
+      t.string :last_name_kana,     null: false
+      t.string :first_name_delivery
+      t.string :first_name_kana_delivery
+      t.string :last_name_delivery
+      t.string :last_name_kana_delivery
+      t.string :phone_number_delivery
+      t.string :exhibit_product
+      t.integer :exhibit_number
+      t.integer :points
+      t.integer :like
+      t.integer :earnings
+      t.integer :purchase_history_id
+      t.integer :sales_history_id
+      t.text :profile
+      t.string :card_id
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

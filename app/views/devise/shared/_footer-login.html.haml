@@ -1,0 +1,25 @@
+.body
+  .body-foot
+    .footer
+      .text-box
+        .text-zone
+          .footer-text
+            %ul.footer-text__box
+              %li.footer-text__box--left
+                .text
+                  %p.text-left
+                    =link_to 'プライバシーポリシー', 'https://www.mercari.com/jp/privacy/', class: "footer-link"
+              %li.footer-text__box--center
+                .text
+                  %p.text-center
+                    =link_to 'メルカリ利用規約', 'https://www.mercari.com/jp/tos/', class: "footer-link"
+              %li.footer-text__box--right
+                .text
+                  %p.text-right
+                    =link_to '特定商取引に関する表記', 'https://www.mercari.com/jp/tokutei/', class: "footer-link"
+          .logo-box
+            .footer-logo
+              =link_to root_path do
+                =image_tag 'SVG/logo_gray.svg'
+          .logo-content
+            © 2020 Mercari
