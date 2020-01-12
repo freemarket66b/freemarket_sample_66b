@@ -1,0 +1,62 @@
+%header.top-content
+  .top-main
+    .top-main-face
+      = link_to image_tag("SVG/fmarket_logo_red.svg", alt: "", class: "top-main-face__logo"), root_path
+      = form_with url: search_products_path, class: "searchbox", local: true do |f|
+        = f.text_field :keyword, type: "search", placeholder: "何かお探しですか？", value: "", class: "texts", name: "keyword", id: ""
+        = f.button class: "sub-button" do
+          = fa_icon "search" 
+    .top-main-leg
+      .top-main-leg__left
+        %ul.item-nav
+          %li
+            %h2
+              = link_to "https://www.mercari.com/jp/category/", class: "category" do
+                %i.fas.fa-list
+                %span カテゴリーから探す
+          .open-category
+
+          %li
+            %h2
+              = link_to "https://www.mercari.com/jp/brand/", class: "brand" do
+                %i.fab.fa-cc-amex
+                %span ブランドから探す
+          .open-brand
+
+      - if user_signed_in?
+        .top-main-leg__right
+          %ul.user-nav
+            %li.like-list
+              = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
+                %i.far.fa-heart
+                %span いいね！一覧
+
+            %li.like-list
+              = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
+                %i.far.fa-bell
+                %span お知らせ
+                .count
+              -# %ul先の実装に必要なため、コメントアウト
+              -#   %li
+              -#     = link_to "", class: ""
+              -#       %figure
+              -#         = image_tag ""
+            %li.like-list
+              = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
+                %i.fas.fa-check
+                %span ToDoリスト
+                .count
+
+            %li.like-list
+              = link_to user_path(current_user.id), class: "menu-link" do
+                %figure
+                  .peace
+                    = image_tag "SVG/logo_gray.svg"
+                %span マイページ
+      -else
+        .top-main-leg__right
+          %ul.user-nav
+            %li.like-list
+              = link_to "新規会員登録", new_user_registration_path, class: "new-acount"
+            %li.like-list
+              = link_to "ログイン",  new_user_session_path, class: "login-acount"

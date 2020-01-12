@@ -1,0 +1,40 @@
+.body-side
+  =render "login-header"
+  .parent
+    =render "side-barMypage"
+    .credit-box
+      .credit-box__title
+        %h2 クレジットカード情報入力
+      .credit-box__body
+        .push-box
+          =form_with model: @post, local: true do |f| 
+            .formbox
+              .form-group-credit
+                %label.yubinNum-new
+                  カード番号
+                %span.must-content
+                  必須
+                %input.yubinNum-info{placeholder: "半角数字のみ", value: ""}/
+                =image_tag "credit/iconfinder_visa-straight_38613.png"
+                =image_tag "credit/iconfinder_mastercard-straight_38603.png"
+                =image_tag "credit/iconfinder_american-express-straight_38591.png"
+                =image_tag "credit/iconfinder_discover-straight_38599.png"
+              .form-group-credit
+                %label.prefecture-new
+                  有効期限
+                %span.must-content
+                  必須
+                .select-parrent
+                  =render "option-birthMonth"
+              .form-group-credit
+                %label.municipality-new
+                  セキュリティコード
+                %span.must-content
+                  必須
+                %input.password-info{placeholder: "カード背面4桁もしくは3桁の番号", value: ""}/
+              =link_to "" do
+                =f.button "次へ進む", class: "go-ahead"
+              =link_to "", class: "link-for-user-info" do
+                カード裏面の番号とは？
+                =fa_icon'chevron-right'
+  =render "footer"
