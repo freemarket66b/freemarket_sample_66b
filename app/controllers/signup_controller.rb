@@ -138,7 +138,7 @@ class SignupController < ApplicationController
 
     if @user.save # ログインするための情報を保管
       session[:id] = @user.id
-      redirect_to signup5_signup_index_path
+      redirect_to root_path
     else
       render 'devise/registrations/new'
     end

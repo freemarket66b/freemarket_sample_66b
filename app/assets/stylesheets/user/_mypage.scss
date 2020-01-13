@@ -1,0 +1,190 @@
+.wrapper {
+  background-color: #f5f5f5;
+  .bodyMypage {
+    height: 100%;
+    width: 1060px;
+    margin: 40px auto 40px;
+    @include clearfix();
+    .main {
+      width: 700px;
+      float: right;
+      .user {
+        height: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: #FEECD0;
+        // background-image: url("/Italy.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .thumbnail {
+          display: block;
+          top: 50%;
+          left: 0;
+          right:0;
+          transform: translate(0, -50%);
+          color: #333;
+          position: absolute;
+          .icon {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            margin: 0 auto;
+            border-radius: 50%;
+          }
+          .nickname {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 8px;
+          }
+          .records {
+            font-size: 16px;
+            margin-top: 8px;
+            .value {
+              display: inline-block;
+              font-size: 14px;
+            }
+            .number {
+              font-weight: bold;
+              margin-left: 8px;
+            }
+          }
+        }
+        .thumbnail:hover {
+          opacity: 0.7;
+        }
+      }
+      .info {
+        background-color: #fff;
+        &__tabs {
+          background-color: #eee;
+          display: flex;
+          width: 100%;
+          .tabs__name1 {
+            text-align: center;
+            width: 50%;
+            height: 74px;
+            line-height: 74px;
+          }
+          h3 {
+            color: #333;
+            font-weight: bold;
+          }
+          h3:hover {
+            color: #888;
+            background-color: #fff;
+            border-top: 2px solid #ea352d;
+          }
+        }
+      }
+      .message {
+        padding-bottom: 1px;
+        .messages {
+          .links {
+            position: relative;
+            border-bottom: 1px solid #eee;
+            padding: 16px;
+          .links:hover {
+            background-color: #fafafa;
+          }
+            .link {
+              text-decoration: none;
+              .figure {
+                background-color: #eee;
+                width: 48px;
+                height: 48px;
+                float: left;
+                .box{
+                  width: 70%;
+                  margin-top: 5px;
+                  margin-left: 7px;
+                }
+              }
+              .form {
+                margin: 0 40px 0 68px;
+                &__text {
+                  text-decoration: none;
+                  color: #333;
+                }
+                &__time {
+                  display: inline-block;
+                  color: #888;
+                }
+              }
+              .chevron {
+                position: absolute;
+                top: 50%;
+                right: 16px;
+                transform: translate(0, -50%);
+                color: #333;
+              }
+            }
+          }
+        }
+        .all {
+          margin: 16px;
+          background-color: #eee;
+          text-align: center;
+          font-size: 14px;
+          height: 56px;
+          line-height: 56px;
+          .detail {
+            text-decoration: none;
+            color: #333;
+            display: block;
+          }
+        }
+        .all:hover {
+          background-color: #fafafa;
+        }
+      }
+      .product {
+        margin: 40px 0 0;
+        background-color: #fff;
+        &__header {
+          padding: 0 16px;
+          background-color: #fafafa;
+          font-size: 16px;
+          line-height: 72px;
+        }
+        &__tabs {
+          background-color: #eee;
+          display: flex;
+          width: 100%;
+          .tabs__name2 {
+            text-align: center;
+            width: 50%;
+            height: 74px;
+            line-height: 74px;
+          }
+          h3 {
+            color: #333;
+            font-weight: bold;
+          }
+          h3:hover {
+            color: #888;
+            background-color: #fff;
+            border-top: 2px solid #ea352d;
+          }
+        }
+        &__messages {
+          .trades {
+            .trades__name {
+              color: #ccc;
+              font-size: 16px;
+              text-align: center;
+              padding: 160px 0 60px;
+              background-image: url("/logo_gray.svg");
+              background-repeat: no-repeat;
+              background-position: center 40px;
+              background-size: 78px 85px;
+            }
+          }
+        }
+      }
+    }
+    .side-bar-box {
+      float: left;
+    }
+  }
+}
