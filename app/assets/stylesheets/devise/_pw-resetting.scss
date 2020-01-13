@@ -1,0 +1,375 @@
+@media screen and (min-width: 768px){
+  .body{
+    background: #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    .header{
+      height: 130px;
+      .header-logo{
+        margin: 0 auto;
+        width:182px;
+        padding: 40px 0 0;
+        cursor: pointer;
+      }
+      .header-logo:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    .main {
+      margin: 0 auto;
+      width: 700px;
+      background: #fff;
+      height: 548px;
+      .upper-header {
+        text-align: center;
+        font-size: 22px;
+        padding: 32px 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #eee;
+      }
+      .resetting-box {
+        padding: 64px;
+        margin: 0 auto;
+        width: 320px;
+        .email {
+          width: 320px;
+          height: 114px;
+          label {
+            height: 48px;
+            // width: 328px;
+            margin-bottom: 24px;
+            font-weight: none;
+          }
+          .email-address {
+            height: 48px;
+            width: 318px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            line-height: 1.5;
+            background-color: #fff;
+            padding-left: 10px;
+            margin-top: 8px;
+          }
+          .reset-info {
+            font-size: 12px;
+            color: #888;
+            margin-top: 8px;
+          }
+        }
+        .robot {
+          .recaptcha {
+            width: 304px;
+            height: 78px;
+            background: azure;
+            border-radius: 2px;
+            margin-top: 40px;
+            .left-side {
+              float: left;
+              display: flex;
+              margin-top: 15px;
+              .robot-check {
+                width: 30px;
+              }
+              .im-not-a-robot {
+                font-size: 15px;
+                text-align: left;
+                width: 150px;
+              }
+            }
+            .right-side {
+              margin-top: 5px;
+              .robot-logo {
+                height: 40px;
+                width: 40px;
+                text-align: right;
+                color: lightseagreen;
+                margin-left: 40px;
+              }
+              .logo-name {
+                color: #333;
+                font-size: 10px;
+                margin-left: 210px;
+              }
+              .links {
+                display: flex;
+                font-size: smaller;
+                margin-right: 2px;
+                margin-left: 180px;
+                .link {
+                  text-decoration: none;
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+        .submit {
+          width: 320px;
+          height: 50px;
+          background: #ea352d;
+          color: #fff;
+          border: 1px solid #ea352d;
+          margin-top: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .body-foot{
+    margin:0 auto;
+    //height: 140px;
+    padding: 40px 0;
+    position: relative;
+    .footer{
+      font-size:12px;
+      height: 170px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .text-box{
+        height: 170px;
+        .footer-text{
+          position: relative;
+          bottom: 40px;
+          &__box{
+            width: 380px;
+            margin:0 auto;
+            a:-webkit-any-link{
+              text-decoration: none;
+              color: black;
+              opacity: 0.7;
+            }
+            a:hover{
+              color: #AAAAAA;
+              border-bottom:solid 1px #AAAAAA;
+            }
+            .text-in{
+              display:flex;
+              margin: 0 auto;
+              .text{
+                padding: 40px 5px;
+              }
+            }
+          }
+        }
+        .logo-box{
+          position: relative;
+          bottom: 40px;
+          .footer-logo{
+            margin: 0 auto;
+            max-width: 50%;
+            width: 80px;
+            cursor: pointer;
+            position: relative;
+          }
+          .footer-logo:hover{
+            opacity: 0.7;
+          }
+        }
+        .logo-content{
+          text-align: center;
+          margin: 0 auto;
+          position: relative;
+          bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .body{
+    background: #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    .header{
+      height: 130px;
+      .header-logo{
+        margin: 0 auto;
+        width:182px;
+        padding: 40px 0 0;
+        cursor: pointer;
+      }
+      .header-logo:hover{
+        opacity: 0.7;
+      }
+    }
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    .main {
+      margin: 0 auto;
+      width: 700px;
+      background: #fff;
+      height: 548px;
+      .upper-header {
+        text-align: center;
+        font-size: 22px;
+        padding: 32px 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #eee;
+      }
+      .resetting-box {
+        padding: 64px;
+        margin: 0 auto;
+        width: 320px;
+        .email {
+          width: 320px;
+          height: 114px;
+          label {
+            height: 48px;
+            // width: 328px;
+            margin-bottom: 24px;
+            font-weight: none;
+          }
+          .email-address {
+            height: 48px;
+            width: 318px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            line-height: 1.5;
+            background-color: #fff;
+            padding-left: 10px;
+            margin-top: 8px;
+          }
+          .reset-info {
+            font-size: 12px;
+            color: #888;
+            margin-top: 8px;
+          }
+        }
+        .robot {
+          .recaptcha {
+            width: 304px;
+            height: 78px;
+            background: azure;
+            border-radius: 2px;
+            margin-top: 40px;
+            .left-side {
+              float: left;
+              display: flex;
+              margin-top: 15px;
+              .robot-check {
+                width: 30px;
+              }
+              .im-not-a-robot {
+                font-size: 15px;
+                text-align: left;
+                width: 150px;
+              }
+            }
+            .right-side {
+              margin-top: 5px;
+              .robot-logo {
+                height: 40px;
+                width: 40px;
+                text-align: right;
+                color: lightseagreen;
+                margin-left: 40px;
+              }
+              .logo-name {
+                color: #333;
+                font-size: 10px;
+                margin-left: 210px;
+              }
+              .links {
+                display: flex;
+                font-size: smaller;
+                margin-right: 2px;
+                .link {
+                  text-decoration: none;
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+        .submit {
+          width: 320px;
+          height: 50px;
+          background: #ea352d;
+          color: #fff;
+          border: 1px solid #ea352d;
+          margin-top: 40px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .body-foot{
+    margin:0 auto;
+    height: 140px;
+    padding: 40px 0;
+    position: relative;
+    .footer{
+      font-size:12px;
+      height: 170px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .text-box{
+        height: 170px;
+        .footer-text{
+          position: relative;
+          bottom: 40px;
+          &__box{
+            width: 380px;
+            margin:0 auto;
+            a:-webkit-any-link{
+              text-decoration: none;
+              color: black;
+              opacity: 0.7;
+            }
+            a:hover{
+              color: #AAAAAA;
+              border-bottom:solid 1px #AAAAAA;
+            }
+            .text-in{
+              display:flex;
+              margin: 0 auto;
+              .text{
+                padding: 40px 5px;
+              }
+            }
+          }
+        }
+        .logo-box{
+          position: relative;
+          bottom: 40px;
+          .footer-logo{
+            margin: 0 auto;
+            max-width: 50%;
+            width: 80px;
+            cursor: pointer;
+            position: relative;
+          }
+          .footer-logo:hover{
+            opacity: 0.7;
+          }
+        }
+        .logo-content{
+          text-align: center;
+          margin: 0 auto;
+          position: relative;
+          bottom: 40px;
+        }
+      }
+    }
+  }
+}

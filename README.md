@@ -8,15 +8,36 @@
 |first_name     |string   |null: false
 |last_name_kana |string   |null: false
 |first_name_kana|string   |null: false
-|birthday_info  |date     |null: false
+|birth_year     |integer  |null: false
+|birth_month    |integer  |null: false
+|birth_day      |integer  |null: false
+|credit         |references|foreign_key: true|
+|sns_credentials_id|intger|null: false, foreign_key: true
 |icon           |string
 |introduction   |text
-|proceed        |integer  |null: false
+
 
 ### Association
 - has_many :buyed_items, foreign_key: “buyer_id”, class_name: “Item”
   has_many :saling_items, -> { where(“buyer_id is NULL”) }, foreign_key: “saler_id”, class_name: “Item”
   has_many :sold_items, -> { where(“buyer_id is not NULL”) }, foreign_key: “saler_id”, class_name: “Item”
+- belongs_to :address
+- belongs_to :credit
+
+  ## addressesテーブル
+|Column         |Type     |Options                   |
+|---------------|---------|---------------           |
+|postal-code    |integer   |null: false, unique: true, index: true
+|prefectures    |string   |null: false, unique: true
+|city           |string   |null: false
+|town_number    |integer  |null: false
+|building-name  |string   |null: false
+|phone_number_delivery |integer|
+|user           |integer  |null: false, foreign_key: true|
+
+### Association 
+- belongs_to :user
+
 ## itemsテーブル
 |Column        |Type     |Options    |
 |--------------|---------|-----------|
@@ -30,8 +51,9 @@
 |shipping_date |integer  |null: false|
 |price         |integer  |null: false|
 |brand         |string   |
-|saler_id      |reference|null: false, foreign_key: true|
-|buyer_id      |reference|null: false, foreign_key: true|
+|category      |reference|null: false, foreign_key: true|
+|saler_id      |reference|null: false, foreign_key: { to_tabele: :users}|
+|buyer_id      |reference|null: false, foreign_key: { to_tabele: :users}|
 ### Association  
 - belongs_to :saler, class_name: "User"
 - belongs_to :buyer, class_name: "User"
