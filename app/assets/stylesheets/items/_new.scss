@@ -1,3 +1,275 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.body{
+  min-height: 100%;
+  background: #F5F5F5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  &__header{
+    &__logo{
+      text-align: center;
+      height: 163px;
+      background-color: #F5F5F5;
+      &__fmi{
+        margin: 60px 0 0;
+      }
+    }
+  }
+  &__content{
+    width: 870px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro'-700;
+    font-weight: 700;
+    font-style: normal;
+    line-height:33px;
+    &__itemInfo{
+      padding: 52px 16px;
+      font-size: 30px;
+      line-height: inherit;
+      text-align: center;
+      font-family: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+      
+    } 
+    &__formArea{
+      border-top: 1px solid #eee;
+      &__itemImage{
+        width: 620px;
+        padding: 40px;
+        padding: 60px;
+        &__title{
+          font-size:19px;
+          span{
+            background-color: red;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 17px;
+            vertical-align: top;
+          }
+          p{
+            font-weight: 400;
+            font-size: 17px;
+          }
+        }
+        &__imagebox{
+          position: relative;
+          height: 300px;
+          width: 150%;
+          margin-top: 25px;
+          // margin-left: 100px;
+          .post{
+            position: absolute;
+            height: 300px;
+            width: 100%px;
+            cursor: pointer;
+            background-color: aqua;
+          }
+          &__choice_box{
+            position: absolute;
+            height: 300px;
+            width: 100%;
+            background-color: #f5f5f5;
+            pointer-events: none;
+            line-height: 300px;
+            text-align: center;
+            border: 1px dashed #ccc;
+
+          }
+        }
+      }
+      &__itemNameAndExplanation{
+        padding: 40px;
+        border-top: 1px solid #eee;
+        &__name{
+          font-size:19px;
+          span{
+            background-color: red;
+            margin: 0 0 0 4px;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 17px;
+            vertical-align: top;
+          }
+          .name{
+            width: 100%;
+            margin: 8px 0 0;
+            height: 48px;
+            padding: 10px 16px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+            font-weight: 400;
+            }
+          }
+        
+      &__explanation{
+        margin-top: 40px;
+        font-size:19px;
+        span{
+          background-color: red;
+          margin: 0 0 0 4px;
+          padding: 2px 4px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 17px;
+          vertical-align: top;
+        }
+        .explanation{
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-height: 154px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          line-height: 1.5;
+          border-radius: 0;
+          font-weight: 400;
+          outline: 0;
+          -webkit-appearance: none;
+        }
+      }
+    }
+  
+    &__itemDetail{
+      display: flex;
+      padding: 40px;
+      border-top: 1px solid #eee;
+      &__title{
+        font-size:19px;
+        color: #888888;
+        margin-left: 20px;
+        margin-right: 150px;
+        white-space: nowrap;
+        
+      }
+      &__formBox{
+        margin-right: 40px;
+          font-size:19px;
+          width: 100%;
+          span{
+            background-color: red;
+            margin: 0 0 0 8px;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 17px;
+            vertical-align: top;
+          }
+          select{
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            height: 48px;
+            padding: 0 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            cursor: pointer;
+          
+        }
+            
+          
+      }
+      }
+    
+    &__itemShipping{
+      display: flex;
+      font-size:19px;
+      padding: 40px;
+      border-top: 1px solid #eee;
+      &__title{
+        font-size:19px;
+        color: #888888;
+        margin-left: 20px;
+        margin-right: 150px;
+        white-space: nowrap;
+      }
+      &__formBox{
+        margin-right: 40px;
+        font-size:19px;
+        width: 100%;
+        span{
+          background-color: red;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 17px;
+          vertical-align: top;
+        }
+        select{
+          width: 100%;
+          position: relative;
+          z-index: 2;
+          height: 48px;
+          padding: 0 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: 0;
+          font-size: 16px;
+          line-height: 1.5;
+          cursor: pointer;
+        
+      }
+      }
+    }
+    &__itemPrice{
+      display: flex;
+      font-size:19px;
+      padding: 40px;
+      border-top: 1px solid #eee;
+      &__title{
+        font-size:19px;
+        color: #888888;
+        margin-left: 20px;
+        margin-right: 150px;
+        white-space: nowrap;
+      }
+      &__formBox{
+        margin-right: 40px;
+        font-size:19px;
+        width: 100%;
+        span{
+          background-color: red;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 4px;
+          color: #fff;
+          font-size: 17px;
+          vertical-align: top;
+        }
+        input{
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+    &__itemSubmitAndBack{
+      padding: 40px;
+      border-top: 1px solid #eee;
+    }
+  }
+}
+  &__footer{
+    width: 456px;
+    height: 290px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+  }
+}
