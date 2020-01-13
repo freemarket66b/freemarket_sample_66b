@@ -58,6 +58,11 @@
               必須
             .body__content__formArea__itemShipping__formBox__postageForm
               = form.select :postage , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"postage" 
+            配送の種類
+            %span
+              必須
+            .body__content__formArea__itemShipping__formBox__deliveryTypeForm
+              = form.select :delivery_type , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"postage" 
             発送元の地域
             %span
               必須
