@@ -28,6 +28,7 @@
       width: 700px;
       // background-color: darkgray;
       margin: 16px 0 0;
+
       display: flex;
       // justify-content: space-between 20px;
     
@@ -229,7 +230,20 @@
           }
         }
       }
-    
+      &__item-photo{
+       float: left;
+       height: 375px;
+       width: 300px;
+       background-color: violet;
+      }
+      &__item-detail{
+        float: right;
+        height: 420px;
+        width: 300px;
+      }
+    }
+
+
     &__item-price-box{
       height: 50px;
       width: 700px;
@@ -423,8 +437,7 @@
          background-color: #AA262A;
          margin-left: 10px;
        }
-      }  
-     }
+     }  
     }
   }
- }
+}
