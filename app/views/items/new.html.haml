@@ -1,45 +1,88 @@
-.header
-  .header__logo
-    ここにロゴとリンクが入る
-.content
-  = form_for @item, local: true do |form|
-    .content__itemInfo
-      商品情報入力
-    .content__itemImage
-      .content__iteminfo__title
-        出品画像
-        %span
-          必須
-      %p
-        最大10枚までアップロードできます
-      .content__itemInfo__imagebox
-        = form.file_field :image
-    .content__itemNameAndExplanation
-      = form.label :nameOfItemName, "商品名"
-      = form.text_field :nameOfItemName
-    .content__itemDetail
-      = form.label :explanationOfItem "商品の説明"
-      = form.text_area :explanationOfItem
-      .content__itemDetail__title
-        商品の詳細
-      .content__itemDtail__formBox
-        = form.label :category
-        %span
-          必須
-        = form.select :category
-    .content__itemShipping
-      .content__itemShipping__title
-        配送について
-      .content__itemShipping__formBox
-    .content__itemPrice
-      .content__itemPrice__title
-      販売価格
-      .content__itemPrice__formBox
-    .content__itemSubmitAndBack
-      .content__itemSubmitAndBack__confirmation
-      .content__itemSubmitAndBack__submit
-      .content__itemSubmitAndBack__back
-.footer
-  プライバシーポリシー  メルカリ利用規約  特定商取引に関する表記
+.body
+  .body__header
+    .body__header__logo
+      %h1
+        = link_to "#" do
+          = image_tag 'fmarket_logo_red.svg', class: 'body__header__logo__fmi', height:'60', width:'200'
+          
+  .body__content
+    = form_for @item, local: true do |form|
+      .body__content__itemInfo
+        商品の情報を入力
+      .body__content__formArea
+        .body__content__formArea__itemImage
+          .body__content__formArea__itemImage__title
+            出品画像
+            %span
+              必須
+            %p
+              最大10枚までアップロードできます
+          .body__content__formArea__itemImage__imagebox
+            = form.file_field :image, class:"post" 
+            .body__content__formArea__itemImage__imagebox__choice_box
+              ドラック＆ドロップまたはクリックしてファイルをアップロード
+        .body__content__formArea__itemNameAndExplanation
+          .body__content__formArea__itemNameAndExplanation__name
+            商品名
+            %span
+              必須
+              .body__content__formArea__itemNameAndExplanation__name__nameForm
+              = form.text_field :name, class:"name",placeholder:"商品名（必須40文字まで）"
+          .body__content__formArea__itemNameAndExplanation__explanation
+            商品の説明
+            %span
+              必須
+            .body__content__formArea__itemNameAndExplanation__explanationForm
+              = form.text_area :explanation,class:"explanation",placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+        .body__content__formArea__itemDetail
+          .body__content__formArea__itemDetail__title
+            商品の詳細
+          .body__content__formArea__itemDetail__formBox
+            カテゴリー
+            %span
+              必須
+            .body__content__formArea__itemDetail__formBox__categoryForm
+              %i 
+              = form.select :price , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"categoty" 
+            商品の状態
+            %span
+              必須
+            .body__content__formArea__itemDetail__formBox__statusForm
+              = form.select :status , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---" ,class:"status"
+        .body__content__formArea__itemShipping
+          .body__content__formArea__itemShipping__title
+            配送について
+          .body__content__formArea__itemShipping__formBox
+            配送料の負担
+            %span
+              必須
+            .body__content__formArea__itemShipping__formBox__postageForm
+              = form.select :postage , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"postage" 
+            発送元の地域
+            %span
+              必須
+            .body__content__formArea__itemShipping__formBox__regionForm
+              = form.select :region , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"region" 
+            発送までの日数
+            %span
+              必須
+            .body__content__formArea__itemShipping__formBox__shippingDate
+              = form.select :shipping_date , [ ["プログラマン講師",1], ["家電メーカー", 2]],prompt: "---",class:"shippingDate" 
+        .body__content__formArea__itemPrice
+          .body__content__formArea__itemPrice__title
+            販売価格(300〜9,999,999)
+          .body__content__formArea__itemPrice__formBox
+            価格
+            %span
+              必須
+            =form.label :price ,"￥"
+            = form.text_field :price
+        .body__content__formArea__itemSubmitAndBack
+          .body__content__formArea__itemSubmitAndBack__confirmation
+          .body__content__formArea__itemSubmitAndBack__submit
+          = form.submit value: "出品"
+          .body__content__formArea__itemSubmitAndBack__back
+  .body__footer
+    プライバシーポリシー  メルカリ利用規約  特定商取引に関する表記
 
-  
+    
