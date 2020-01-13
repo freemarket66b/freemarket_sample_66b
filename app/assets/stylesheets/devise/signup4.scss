@@ -1,0 +1,157 @@
+@media screen and (min-width: 768px){
+  .body{
+    @include bodyTemp;
+    .addless-box{
+    width: 700px;
+      max-width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: white;
+      &__title{
+        display: block;
+        height: 95px;
+        border-bottom:1.5px solid #f5f5f5;
+        h2{
+          line-height: 95px;
+          font-size: 22px;
+          font-weight: bolder;
+          text-align: center;
+        }
+      }
+      &__body{
+        height: 100%;
+        .push-box{
+          form{
+            padding: 20px 40px 64px;
+            text-align: left;
+            .formbox{
+              width: 343px;
+              margin:0 auto;
+              .form-group{
+                padding: 22px 0;
+                label{
+                  font-weight: 600;
+                }
+                span.must-content{
+                  @include mustDesign;
+                }
+                span.nini-content{
+                  @include mustDesign(#ccc);
+                }
+                p{
+                  padding: 10px 0;
+                  line-height: 1.5;
+                }
+                input{
+                  @include inputTemp;
+                }
+                select#user_prefectures{
+                  padding: 10px 16px 8px;
+                  width: 343px;
+                  margin: 8px 0 0;
+                  @include selectType;
+                }
+                .input-parrent{
+                  display: flex;
+                  input{
+                    width: 165.5px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+              .go-ahead4{
+                margin-top: 30px;
+                @include submit-btn;
+              }
+              p{
+                padding: 10px 0;
+                line-height: 1.5;
+              }
+              .link-for-user-info{
+                @include blue-line;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .body{
+    @include bodyTemp;
+    .addless-box{
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      &__title{
+        display: block;
+        height: 58px;
+        border-bottom:1px solid #eee;
+        h2{
+          line-height: 58px;
+          font-size: 18px;
+          font-weight: bolder;
+          text-align: center;
+        }
+      }
+      &__body{
+        .push-box{
+          padding: 6px 16px 40px;
+          form{
+            .formbox{
+              width: 343px;
+              margin:0 auto;
+              .form-group{
+                padding: 22px 0;
+                label{
+                  font-weight: 600;
+                }
+                span.must-content{
+                  @include mustDesign;
+                }
+                span.nini-content{
+                  @include mustDesign(#ccc);
+                }
+                p{
+                  padding: 5px 0;
+                  line-height: 1.5;
+                }
+                input{
+                  @include inputTemp;
+                }
+                select.prefectures{
+                  padding: 10px 16px 8px;
+                  width: 343px;
+                  margin: 8px 0 0;
+                  @include selectType;
+                }
+                .input-parrent{
+                  display: flex;
+                  input{
+                    width: 165.5px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+              .go-ahead4{
+                margin-top: 10px;
+                @include submit-btn;
+              }
+              p{
+                padding: 5px 0;
+                line-height: 1.5;
+              }
+              .link-for-user-info{
+                @include blue-line;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

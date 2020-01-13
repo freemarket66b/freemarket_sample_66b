@@ -1,0 +1,246 @@
+@media screen and (min-width: 768px){
+  .body{
+    @include bodyTemp;
+    .signup-header{
+      height: 130px;
+      display: flex;
+      background:#f5f5f5;
+      &__box{
+        width: 768px;
+        display: flex;
+        margin: 0 auto;
+        height: 130px;
+        .signup-header-logo{
+          display: inline-block;
+          padding: 40px 0 0 0;
+          min-width:182px;
+          cursor: pointer;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        nav.signupBar{
+          max-width: 100%;
+          display: inline-block;
+          vertical-align: top;
+          border: 0;
+          position: relative;
+          left: 40px;
+          ol.signupList{
+            display: flex;
+            padding-top:40px;
+            margin: 0;
+            li.now-point{
+              color: #ea352d;
+              font-weight: bold;
+            }
+            li.marker{
+              .mark{
+                position: relative;
+                z-index: 1000;
+                background-color: #ea352d;
+              }
+            }
+            li.marker2{
+              .mark-line{
+                background-color: #ea352d;
+              }
+            }
+            li{
+              color:gray;
+              font-size: 12px;
+              text-align: left;
+              .mark-name1{
+                display: inline;
+                position: relative;
+                right: 18px;
+              }
+              .mark-name2{
+                display: inline;
+                position: relative;
+                right: 30px;
+              }
+              .mark-name3{
+                display: inline;
+                position: relative;
+                right: 40px;
+              }
+              .mark-name4{
+                display: inline;
+                position: relative;
+                right: 24px;
+              }
+              .mark-name5{
+                display: inline;
+                position: relative;
+                right: 6px;
+              }
+            }
+            li.signupInfo{
+              .mark-line{
+                min-width: 115px;
+              }
+            }
+            li.signupTell{
+              .mark-line{
+                min-width: 115px;
+              }
+            }
+            li.signupAdd{
+              .mark-line{
+                min-width: 115px;
+              }
+            }
+            li.signupHowToPay{
+              .mark-line{
+                min-width: 115px;
+              }
+            }
+            li.signupComplete{
+              .mark-line{
+                opacity: 0;
+              }
+            }
+          }
+          .marking{
+            display: flex;
+            .mark{
+              position: relative;
+              z-index: 2;
+              width: 12px;
+              height: 12px;
+              margin: 8px 0 0;
+              background: #ccc;
+              border-radius: 50%;
+            }
+            .mark-line{
+              position: relative;
+              top:5px;
+              margin:8px 0 0 0 ;
+              display: block;
+              content: '';
+              height: 2px;
+              background: #ccc;
+              z-index: 1;
+            }
+          }
+        } 
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .body{
+    @include bodyTemp;
+    .signup-header{
+      height: 121px;
+      text-align: center;
+      &__box{
+        border-bottom:1px solid #eee;
+        height: 50%;
+        box-sizing: border-box;
+        .signup-header-logo{
+          display: inline-block;
+          min-width:120px;
+          max-width:100%;
+          height: 33px;
+          margin: 16px auto;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        nav.signupBar{
+          max-width: 100%;
+          border: 0;
+          display: inline-block;
+          margin:10px auto 0;
+          ol.signupList{
+            display: flex;
+            li.now-point{
+              color: #ea352d;
+              font-weight: bold;
+            }
+            li.marker{
+              .mark{
+                background-color: #ea352d;
+              }
+            }
+            li.marker2{
+              .mark-line{
+                background-color: #ea352d;
+              }
+            }
+            li{
+              color:gray;
+              font-size: 12px;
+              text-align: left;
+              .mark-name1{
+                display: inline;
+                position: relative;
+                //right: 18px;
+              }
+              .mark-name2{
+                display: inline;
+                position: relative;
+                right: 30px;
+              }
+              .mark-name3{
+                display: inline;
+                position: relative;
+                //right: 40px;
+              }
+              .mark-name4{
+                display: inline;
+                position: relative;
+                //right: 24px;
+              }
+              .mark-name5{
+                display: inline;
+                position: relative;
+                //right: 6px;
+              }
+            }
+            li.signupInfo{
+              .mark-line{
+                width: 115px;
+              }
+            }
+            li.signupTell{
+              .mark-line{
+                width: 115px;
+              }
+            }
+            li.signupAdd{
+              .mark-line{
+                width: 115px;
+              }
+            }
+            li.signupHowToPay{
+              .mark-line{
+                width: 115px;
+              }
+            }
+          }
+          .mark{
+            width: 12px;
+            height: 12px;
+            margin: 8px auto 0;
+            background: #ccc;
+            border-radius: 50%;
+          }
+          .mark-line{
+            position: relative;
+            top:5px;
+            display: block;
+            content: '';
+            height: 2px;
+            background: #ccc;
+            max-width: 50%;
+          }
+        } 
+      }
+    }
+  }
+}
