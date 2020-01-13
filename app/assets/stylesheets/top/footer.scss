@@ -1,0 +1,282 @@
+.footer {
+  height: calc(391px + 260px);
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+  font-weight: 500;
+  .upper-footer {
+    width: 100%;
+    height: 260px;
+    background-image: url("https://www.pakutaso.com/shared/img/thumb/171030ell_DSC1941_TP_V.jpg");
+    background-position: center;
+    background-size: cover;
+    &__middle-upper {
+      width: 750px;
+      height: 260px;
+      margin: 0 auto;
+      color: #fff;
+      justify-content: space-between;
+      display: flex;
+      &--content {
+        padding-top: 40px;
+        width: 417.2px;
+        justify-content: center;
+        flex-direction: column;
+        h1.upper-text {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        h1.bottom-text {
+          font-size:35px;
+          margin: 0px 0px 20px 0px;
+        }
+        .upper-footer__middle-bottom {
+          height: 68px;
+          img.mercarilogo {
+            width: 68px;
+            height: 68px;
+            margin-right: 20px;
+            vertical-align: middle;
+          }
+          .appstore-link {
+            margin-right: 8px;
+            width:144px;
+            height: 40px;
+            vertical-align: middle;
+          }
+          .appstore-link:hover {
+            opacity: 0.7!important;
+          }
+          .googleplay-link {
+            width:144px;
+            height: 40px;
+            vertical-align: middle;
+          }
+          .googleplay-link:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .upper-footer__right-photo {
+        display: block;
+        height: 260px;
+        width: 300px;
+        float: right;
+        .right-photo {
+          height: 260px;
+          width: 300px;
+          display: block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .bottom-footer {
+    padding: 0 20px 10px;
+    background-color: rgb(33, 33, 33);
+    color: #fff;
+    height: auto;
+    &__content {
+      margin: 0 190px;
+      display: flex;
+      // justify-content: center;
+      .bottom-footer__about {
+        margin-top: 18px;
+        float: left;
+        width: 23%;
+        min-width: 150px;
+        h2.title {
+          line-height: 1.4;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0;
+        }
+        ul.links {
+          list-style: none;
+          padding: 0;
+          li.outer-links {
+            margin: 16px 0 0;
+            line-height: 1.4rem;
+            a {
+              text-decoration: none;
+              font-size: 12px;
+              color: #ffffff;
+              opacity: 0.7;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+          .social-icons {
+            display: flex;
+            margin-top: 30px;
+            a {
+              text-decoration: none;
+              i.fab.fa-twitter {
+                content: "\f099";
+                font: normal 14px/1 FontAwesome;
+                color: white;
+                font-size: 30px;
+                font-weight: 900;
+                margin-right: 20px;
+                margin-top: 30px;
+              }
+              i.fab.fa-facebook-square {
+                content: "\f082";
+                font: normal 14px/1 FontAwesome;
+                color: white;
+                font-size: 30px;
+                font-weight: 900;
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+      .bottom-footer__guide {
+        width: 23%;
+        margin-top: 18px;
+        float: left;
+        min-width: 200px;
+        h2.title {
+          line-height: 1.4;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0;
+          // どこに配置するか？llllllllllllllllllllllllllllll
+        }
+        ul.links {
+          list-style: none;
+          padding: 0;
+          li.outer-links {
+            margin: 16px 0 0;
+            line-height: 1.4rem;
+            a:hover {
+              text-decoration: underline;
+            }
+            a {
+              text-decoration: none;
+              font-size: 12px;
+              color: #ffffff;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .bottom-footer__privacy {
+        width: 43%;
+        padding: 0 30px 0 0;
+        margin-top: 18px;
+        float: left;
+        h2.title {
+          line-height: 1.4;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0;
+        }
+        .left-side {
+          width:43%;
+          float: left;
+          padding-right: 10px;
+          ul.links {
+            list-style: none;
+            padding: 0;
+            li.outer-links {
+              margin: 16px 0 0;
+              line-height: 1.4rem;
+              a:hover {
+                text-decoration: underline;
+              }
+              a {
+                text-decoration: none;
+                font-size: 12px;
+                color: #ffffff;
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+        .right-side {
+          width: 47%;
+          float: right;
+          padding-left: 10px;
+          ul.links {
+            list-style: none;
+            padding: 0;
+            li.outer-links {
+              margin: 16px 0 0;
+              line-height: 1.4rem;
+              a:hover {
+                text-decoration: underline;
+              }
+              a {
+                text-decoration: none;
+                font-size: 12px;
+                color: #ffffff;
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+      .bottom-footer__country {
+        margin-top: 18px;
+        float: left;
+        width: auto;
+        h2.title {
+          line-height: 1.4;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+          margin: 0;
+        }
+        ul.links {
+          list-style: none;
+          padding: 0;
+          li.outer-links {
+            margin: 16px 0 0;
+            line-height: 1.4rem;
+            a:hover {
+              text-decoration: underline;
+            }
+            a {
+              text-decoration: none;
+              font-size: 12px;
+              color: #ffffff;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    .bottom-footer__copyright {
+      display: flex;
+      margin: 30px auto 20px;
+      width: 1020px;
+      height: 33px;
+      align-items: center;
+      .logo:hover {
+        opacity: 0.7!important;
+      }
+      .logo{
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        color: #ffffff;
+        font-size: 25px;
+        height: 40px;
+        width: 124px;
+      }
+      .mercari__copyright {
+        font-size: 12px;
+        text-align: center;
+        color: #ffffff;
+        justify-content: center;
+        width: 75%;
+        height: 12px;
+        padding-left: 15px;
+      }
+    }
+  }
+}
