@@ -5,6 +5,7 @@ end
 
 
   def new
+    @item = Item.new
   end
 
 
@@ -14,5 +15,6 @@ end
   def show
   end
 
-
+  def buy
+  end
 end

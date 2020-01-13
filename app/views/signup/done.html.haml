@@ -1,0 +1,50 @@
+.body
+  .signup-header
+    .signup-header__box
+      .signup-header-logo
+        =link_to root_path do
+          =image_tag 'SVG/fmarket_logo_red.svg'
+      %nav.signupBar
+        %ol.signupList
+          %li.signupInfo.marker.marker2
+            .mark-name1
+              会員情報
+            .marking
+              .mark
+              .mark-line
+          %li.signupTell.marker.marker2
+            .mark-name2
+              電話番号認証
+            .marking
+              .mark
+              .mark-line
+          %li.signupAdd.marker.marker2
+            .mark-name3
+              お届け先住所入力
+            .marking
+              .mark
+              .mark-line
+          %li.signupHowToPay.marker.marker2
+            .mark-name4
+              支払い方法
+            .marking
+              .mark
+              .mark-line
+          %li.signupComplete.marker.now-point
+            .mark-name5
+              完了
+            .marking
+              .mark
+              .mark-line
+  .last-box
+    .last-box__title
+      %h2 会員登録完了
+    .last-box__body
+      .form
+        %p ありがとうございます。
+        %p 会員登録が完了しました。
+        .formbox
+          =link_to root_path do
+            %button.go-ahead メルカリをはじめる
+      =image_tag "background/tech.jpg", class: "tech-image"
+  =render "devise/shared/footer-login"
