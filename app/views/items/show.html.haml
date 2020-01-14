@@ -1,6 +1,6 @@
 .item-box-container
   
-  -# = render 'layouts/header'
+  
 
   .item-box-container__item-box
     .item-box-container__item-box__item-name
@@ -9,22 +9,26 @@
       『トークハット』は、482回の取引実績を持つKANNA❥プロフ必読！さんから出品されました。エイミーイストワール（ハンチング/ベレー帽/レディース）の商品で、北海道から1~2日で発送されます。
     .item-box-container__item-box__item-main-content
       .item-box-container__item-box__item-main-content__item-photo
+        = image_tag 'nike-jpg.jpeg', class: 'item-photo', height:'300', width:'300'
       .item-box-container__item-box__item-main-content__item-detail
         .item-box-container__item-box__item-main-content__item-detail__table
           .item-box-container__item-box__item-main-content__item-detail__table__colmun-left
             出品者
           .item-box-container__item-box__item-main-content__item-detail__table__colmun-right
-            小林拓矢
+            = link_to '#' , class: 'colmun-right' do
+              小林拓矢
         .item-box-container__item-box__item-main-content__item-detail__table-1
           .item-box-container__item-box__item-main-content__item-detail__table-1__colmun-left-1
             カテゴリー 
           .item-box-container__item-box__item-main-content__item-detail__table-1__colmun-right-1
-            レディース
+            = link_to '#' , class: 'colmun-right-1' do
+              レディース
         .item-box-container__item-box__item-main-content__item-detail__table-2
           .item-box-container__item-box__item-main-content__item-detail__table-2__colmun-left-2
             ブランド 
           .item-box-container__item-box__item-main-content__item-detail__table-2__colmun-right-2
-            NIKE
+            = link_to '#' , class: 'colmun-right-2' do
+              NIKE
         .item-box-container__item-box__item-main-content__item-detail__table-3
           .item-box-container__item-box__item-main-content__item-detail__table-3__colmun-left-3
             商品の状態 
@@ -44,7 +48,8 @@
           .item-box-container__item-box__item-main-content__item-detail__table-6__colmun-left-6
             配送元地域 
           .item-box-container__item-box__item-main-content__item-detail__table-6__colmun-right-6
-            東京都
+            = link_to '#' , class: 'colmun-right-6' do
+              東京都
         .item-box-container__item-box__item-main-content__item-detail__table-7
           .item-box-container__item-box__item-main-content__item-detail__table-7__colmun-left-7
             発送の目安 
@@ -60,17 +65,22 @@
         送料込み
     
     .item-box-container__item-box__item-buy-btn
-      購入画面に進む
+      = link_to '#' , class: 'item-buy-btn' do
+        購入画面に進む
+      
     .item-box-container__item-box__item-description
       商品説明
     .item-box-container__item-box__item-button-container
       .item-box-container__item-box__item-button-container__item-button-left
         .item-box-container__item-box__item-button-container__item-button-left__iine-btn
-          ♡いいね！1
+          = link_to '#' , class: 'iine-btn' do
+            ♡いいね！1
         .item-box-container__item-box__item-button-container__item-button-left__report-btn
-          不適切な商品の報告
+          = link_to '#' , class: 'report-btn' do
+            不適切な商品の報告
       .item-box-container__item-box__item-button-container__item-button-right
-        あんしん・あんぜんへの取り組み
+        = link_to '#' , class: 'item-button-right' do
+          あんしん・あんぜんへの取り組み
   
   .item-box-container__item-detail-message
     .item-box-container__item-detail-message__message-container
@@ -82,26 +92,37 @@
   
   .item-box-container__item-nav
     .item-box-container__item-nav__link-prev
-      < ニット
+      = link_to '#' , class: 'link-prev' do
+        < ニット
     .item-box-container__item-nav__link-next
-      シューズ >
+      = link_to '#' , class: 'link-next' do
+        シューズ >
   
   .item-box-container__sns-box
     .item-box-container__sns-box__icon-box
       .item-box-container__sns-box__icon-box__icon1
+        = link_to '#' do
+          = image_tag 'facebook-icon.svg', class: 'icon1', height:'44', width:'44'
       .item-box-container__sns-box__icon-box__icon2
+        = link_to '#' do
+          = image_tag 'twitter-3.svg', class: 'icon2', height:'44', width:'44'
       .item-box-container__sns-box__icon-box__icon3
+        = link_to '#' do
+          = image_tag 'line-messenger.svg', class: 'icon3', height:'44', width:'44'
       .item-box-container__sns-box__icon-box__icon4
+        = link_to '#' do
+          = image_tag 'pinterest-circle.svg', class: 'icon4', height:'44', width:'44'
     
   .item-box-container__items-user-profile 
     .item-box-container__items-user-profile__user-items-container
       .item-box-container__items-user-profile__user-items-container__items-box-head
         .item-box-container__items-user-profile__user-items-container__items-box-head__other
-          ○○さんのその他の商品
+          = link_to '#' , class: 'other' do
+            ○○さんのその他の商品
       .item-box-container__items-user-profile__user-items-container__items-box-content
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__photo
-            商品写真
+            = image_tag 'nike-jpg.jpeg', class: 'items-box__photo', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body
             商品名、プライス
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1
@@ -132,7 +153,8 @@
     .item-box-container__items-user-profile__blands-items-container
       .item-box-container__items-user-profile__blands-items-container__blands-box-head
         .item-box-container__items-user-profile__blands-items-container__blands-box-head__blands-other
-          ブランドのその他の商品
+          = link_to '#' , class: 'blands-other' do
+            ブランドのその他の商品
       .item-box-container__items-user-profile__blands-items-container__blands-items-box-content
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-photo
@@ -166,7 +188,8 @@
             商品名、プライス5
     .item-box-container__bread-crumbs-content
       .item-box-container__bread-crumbs-content__mercari-btn
-        メルカリ>
+        = link_to '#' , class: 'mercari-btn' do
+          メルカリ>
       .item-box-container__bread-crumbs-content__brand-btn
         ニット　セーター　NIKE
   
