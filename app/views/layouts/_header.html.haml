@@ -31,7 +31,7 @@
               = fa_icon "check"
               ToDoリスト
           .top__header__menu__right__my-page
-            = link_to destroy_user_session_path, class: "menu-link", method: :delete do
+            = link_to destroy_user_session_path, method: :delete do
               = image_tag "mig.jpeg"
               マイページ
       - else
