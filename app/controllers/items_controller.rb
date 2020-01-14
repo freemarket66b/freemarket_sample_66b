@@ -6,7 +6,7 @@ end
 
   def new
     @item = Item.new
-    @parents = Category.all.order("id ASC").limit(13)
+    @parents = Category.order("id ASC").limit(13)
   end
 
 
