@@ -1,0 +1,198 @@
+= render "header"
+.main
+  .slide
+    .slideB
+      = image_tag "top-slide.png", class: "slide-image"
+    .slideB
+      -# = image_tag "slide_5.png", class: "slide-image"
+    .slideB
+      -# = image_tag "slide-a.png", class: "slide-image"
+  .top-nav
+    .Category
+      人気のカテゴリー
+    %ul.Categorys
+      %li
+        =link_to "レディース", class: "Categorys__list--item"
+      %li
+        =link_to "メンズ", class: "Categorys__list--item"
+      %li
+        =link_to "家電・スマホ・カメラ", class: "Categorys__list--item"
+      %li
+        =link_to "おもちゃ・ホビー・グッズ", class: "Categorys__list--item"
+  .main-body
+    .main-contents
+      .main-contents__top
+        .main-contents__header--name
+          新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          -# - @products.each do |product|
+            %li
+              .main-contents-box
+                =link_to product_path(product.id), class: "contents-item" do
+                  .contents-item__image
+                    .contents-item__image--price
+                      ¥
+                      %span= product.price
+                    = image_tag product.image_url if product.image.present?
+                  .contents-item__index
+                    .contents-item__index--name
+                      %span= product.name
+      .main-contents__header
+        .main-contents__header--name
+          メンズ新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to "#", class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+      .main-contents__header
+        .main-contents__header--name
+          家電・スマホ・カメラ新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to "#", class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+      .main-contents__header
+        .main-contents__header--name
+          おもちゃ・ホビー・グッズ新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+  .top-nav
+    .Category
+      人気のブランド
+    %ul.Categorys
+      %li
+        =link_to "タグ・ホイヤー", class: "Categorys__list--item"
+      %li
+        =link_to "PRADA", class: "Categorys__list--item"
+      %li
+        =link_to "Hamilton", class: "Categorys__list--item"
+      %li
+        =link_to "FENDI", class: "Categorys__list--item"
+  .main-body
+    .main-contents
+      .main-contents__top
+        .main-contents__header--name
+          タグ・ホイヤー新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+      .main-contents__header
+        .main-contents__header--name
+          PRADA新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name 
+                    %span テスト
+      .main-contents__header
+        .main-contents__header--name
+          Hamilton新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+      .main-contents__header
+        .main-contents__header--name
+          FENDI新着アイテム
+        =link_to "もっと見る ＞", class: "main-contents__header--more"
+      .main-contents__goods
+        %ul
+          %li
+            .main-contents-box
+              = link_to root_path, class: "contents-item" do
+                .contents-item__image
+                  .contents-item__image--price
+                    %span ¥1,000
+                .contents-item__index
+                  .contents-item__index--name
+                    %span テスト
+
+= render "footer"

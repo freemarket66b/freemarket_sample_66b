@@ -1,62 +1,43 @@
-%header.top-content
-  .top-main
-    .top-main-face
-      = link_to image_tag("SVG/fmarket_logo_red.svg", alt: "", class: "top-main-face__logo"), root_path
-      = form_with url: search_products_path, class: "searchbox", local: true do |f|
-        = f.text_field :keyword, type: "search", placeholder: "何かお探しですか？", value: "", class: "texts", name: "keyword", id: ""
-        = f.button class: "sub-button" do
-          = fa_icon "search" 
-    .top-main-leg
-      .top-main-leg__left
-        %ul.item-nav
-          %li
-            %h2
-              = link_to "https://www.mercari.com/jp/category/", class: "category" do
-                %i.fas.fa-list
-                %span カテゴリーから探す
-          .open-category
+%header
+  .top__header
+    .top__header__upper
+      = link_to image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3791839826", alt: "", class: "top__header__upper__logo"), "#"
+      = form_for '#' do |f|
+        = f.text_field :keyword, type: "search", placeholder: "何かお探しですか？", value: "", class: "top__header__upper__search", name: "keyword", id: ""
+        = f.button class: "search-btn" do
+          = icon("fa","search") 
+    .top__header__menu
+      .top__header__menu__left
+        .top__header__menu__left__category
+          = link_to "https://www.mercari.com/jp/category/", class: "category" do
+            = icon("fa","list")
+            %span カテゴリーから探す
+        .top__header__menu__left__brand
+          = link_to "https://www.mercari.com/jp/brand/", class: "brand" do
+            = icon("fa","tag")
+            %span ブランドから探す
 
-          %li
-            %h2
-              = link_to "https://www.mercari.com/jp/brand/", class: "brand" do
-                %i.fab.fa-cc-amex
-                %span ブランドから探す
-          .open-brand
-
-      - if user_signed_in?
-        .top-main-leg__right
-          %ul.user-nav
-            %li.like-list
-              = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
-                %i.far.fa-heart
-                %span いいね！一覧
-
-            %li.like-list
-              = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
-                %i.far.fa-bell
-                %span お知らせ
-                .count
-              -# %ul先の実装に必要なため、コメントアウト
-              -#   %li
-              -#     = link_to "", class: ""
-              -#       %figure
-              -#         = image_tag ""
-            %li.like-list
-              = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
-                %i.fas.fa-check
-                %span ToDoリスト
-                .count
-
-            %li.like-list
-              = link_to user_path(current_user.id), class: "menu-link" do
-                %figure
-                  .peace
-                    = image_tag "SVG/logo_gray.svg"
-                %span マイページ
-      -else
-        .top-main-leg__right
-          %ul.user-nav
-            %li.like-list
-              = link_to "新規会員登録", new_user_registration_path, class: "new-acount"
-            %li.like-list
-              = link_to "ログイン",  new_user_session_path, class: "login-acount"
+      .top__header__menu__right
+        .top__header__menu__right__likes
+          = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
+            = icon("fa","heart")
+            %span いいね！一覧
+        .top__header__menu__right__notifi
+          = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
+            = icon("fa","bell")
+            %span お知らせ
+        .top__header__menu__right__todo
+          = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
+            = icon("fa","check")
+            %span ToDoリスト
+        .top__header__menu__right__my-page
+          = link_to "#", class: "menu-link" do
+            -# = image_tag "mig.jpeg"
+            %span マイページ
+      -# -else
+      -#   .top__header__menu__right
+      -#     %ul.user-nav
+      -#       %li.like-list
+      -#         = link_to "新規会員登録", new_user_registration_path, class: "new-acount"
+      -#       %li.like-list
+      -#         = link_to "ログイン",  new_user_session_path, class: "login-acount"
