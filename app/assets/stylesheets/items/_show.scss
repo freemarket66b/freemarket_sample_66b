@@ -64,8 +64,12 @@
             height: 60px;
             width: calc(350px - 40%);
             padding-left: 5px;
-            font-size: 14px;
-            color: #0099e8;
+
+            a{
+              font-size: 14px;
+              color: #0099e8;
+              text-decoration: none;
+            }
           }
         }
         &__table-1{
@@ -87,8 +91,12 @@
             height: 60px;
             width: calc(350px - 40%);
             padding-left: 5px;
-            font-size: 14px;
-            color: #0099e8;
+            
+            a{
+              font-size: 14px;
+              color: #0099e8;
+              text-decoration: none;
+            }
           }
         }
         &__table-2{
@@ -110,8 +118,12 @@
             height: 42px;
             width: calc(350px - 40%);
             padding-left: 5px;
-            font-size: 14px;
-            color: #0099e8;
+            
+            a{
+              font-size: 14px;
+              color: #0099e8;
+              text-decoration: none;
+            }
           }
         }
         &__table-3{
@@ -202,8 +214,12 @@
             height: 43px;
             width: calc(350px - 40%);
             padding-left: 5px;
-            font-size: 14px;
-            color: #0099e8;
+            
+            a{
+              font-size: 14px;
+              color: #0099e8;
+              text-decoration: none;
+            }
           }
         }
         &__table-7{
@@ -268,10 +284,13 @@
       background-color: red;
       margin-top: 16px;
       text-align: center;
-      color: #fff;
       font-size: 24px;
       line-height: 60px;
       font-weight: 600;
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
     }
 
     &__item-description{
@@ -286,10 +305,6 @@
     &__item-button-container{
       height: 35px;
       width: 700px;
-
-      // margin: 16px 0 0;
-      
-      // background-color:whitesmoke;
       
       &__item-button-left{
         float: left;
@@ -300,22 +315,31 @@
           height: 15px;
           width: 75px;
           padding: 8px 16px;
-          color: #333;
           border: 1px solid #f5f5f5;
           background: #f5f5f5;
           border-radius: 40px;
-          font-size: 12px;
+          
+          a{
+            color: #333;
+            font-size: 12px;
+            text-decoration: none;
+          }
         }
         &__report-btn{
           height: 15px;
           width: 125px;
-          color: #333;
           border-radius: 40px;
           background: #f5f5f5;
           padding: 8px 16px;
-          margin: -32px 0px 0px 130px;
-          font-size: 12px;
+          margin: -30px 0px 0px 130px;
           text-align: center;
+          
+          a{
+            color: #333;
+            font-size: 12px;
+            text-decoration: none;
+            
+          }
         }
       }
       &__item-button-right{
@@ -323,8 +347,12 @@
         float: right;
         height: 25px;
         width: 180px;
-        font-size: 12px;
-        color: #0099e8;
+        
+        a{
+          color: #0099e8;
+          font-size: 12px;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -376,8 +404,12 @@
       width: 300px;
       height: 30px;
       padding: 0 0 0 14px;
-      font-size: 13px;
-      color: #0099e8;
+      margin-top: -10px;
+      a{
+        font-size: 13px;
+        color: #0099e8;
+        text-decoration: none;
+      }
     }
     &__link-next{
       float: right;
@@ -385,8 +417,13 @@
       text-align: right;
       width: 300px;
       height: 30px; 
-      color: #0099e8;
-      font-size: 13px;
+      margin-top: -10px;
+      a{
+        font-size: 13px;
+        color: #0099e8;
+        text-decoration: none;
+        
+      }
     }
   }
   &__sns-box{
@@ -407,11 +444,12 @@
         width: 44px;
         background-color: #385185;
         margin-left: 35%;
+        
       }
       &__icon2{
         height: 44px;
         width: 44px;
-        background-color: #5d9dc9;
+        background-color: #0099e8;
         margin-bottom: 60px;
         margin-left: 10px;
       }
@@ -448,9 +486,13 @@
         margin: 24px 0 8px;
         
         &__other{
-          color: #0099e8;
-          font-size: 22px;
-          padding: 5px;
+          
+          a{
+            color: #0099e8;
+            font-size: 22px;
+            padding: 5px;
+            text-decoration: none;
+          }
         }
       }
       &__items-box-content{
@@ -575,9 +617,13 @@
         margin: 50px 0 8px;
         
         &__blands-other{
-          color: #0099e8;
-          font-size: 22px;
-          padding: 5px;
+          
+          a{
+            color: #0099e8;
+            font-size: 22px;
+            padding: 5px;
+            text-decoration: none;
+          }
         }
       }
       &__blands-items-box-content{
@@ -693,16 +739,19 @@
   &__bread-crumbs-content{
     width: 700px;
     height: 30px;
-    border-top: 1px solid #eee;
-    margin-top: 98px;
+    margin-top: 60px;
     padding: 16px 0px;
     display: flex;
     
     &__mercari-btn{
       height: 18px;
       width: 66px;
-      font-size: 14px;
-      line-height: 1.2;
+      margin-top: -5px;
+      a{
+        color: #333333;
+        font-size: 14px;
+        text-decoration: none;
+      }
     }
     &__brand-btn{
       font-weight: 600;
