@@ -1,12 +1,12 @@
 .body{
   background-color: rgb(245, 245, 245);
-  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   ::-webkit-scrollbar {
     display: none;
   }
 }
 .main {
   width: 100%;
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   .slide {
     height: 340px;
     .slide-image{
