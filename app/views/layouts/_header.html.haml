@@ -5,39 +5,38 @@
       = form_for '#' do |f|
         = f.text_field :keyword, type: "search", placeholder: "何かお探しですか？", value: "", class: "top__header__upper__search", name: "keyword", id: ""
         = f.button class: "search-btn" do
-          = icon("fa","search") 
+          = fa_icon "search" 
     .top__header__menu
       .top__header__menu__left
         .top__header__menu__left__category
           = link_to "https://www.mercari.com/jp/category/", class: "category" do
-            = icon("fa","list")
-            %span カテゴリーから探す
+            = fa_icon "list"
+            カテゴリーから探す
         .top__header__menu__left__brand
           = link_to "https://www.mercari.com/jp/brand/", class: "brand" do
-            = icon("fa","tag")
-            %span ブランドから探す
-
-      .top__header__menu__right
-        .top__header__menu__right__likes
-          = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
-            = icon("fa","heart")
-            %span いいね！一覧
-        .top__header__menu__right__notifi
-          = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
-            = icon("fa","bell")
-            %span お知らせ
-        .top__header__menu__right__todo
-          = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
-            = icon("fa","check")
-            %span ToDoリスト
-        .top__header__menu__right__my-page
-          = link_to "#", class: "menu-link" do
-            -# = image_tag "mig.jpeg"
-            %span マイページ
-      -# -else
-      -#   .top__header__menu__right
-      -#     %ul.user-nav
-      -#       %li.like-list
-      -#         = link_to "新規会員登録", new_user_registration_path, class: "new-acount"
-      -#       %li.like-list
-      -#         = link_to "ログイン",  new_user_session_path, class: "login-acount"
+            = fa_icon "tag"
+            ブランドから探す
+      - if user_signed_in?
+        .top__header__menu__right
+          .top__header__menu__right__likes
+            = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
+              = fa_icon "heart"
+              いいね！一覧
+          .top__header__menu__right__notifi
+            = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
+              = fa_icon "bell"
+              お知らせ
+          .top__header__menu__right__todo
+            = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
+              = fa_icon "check"
+              ToDoリスト
+          .top__header__menu__right__my-page
+            = link_to "#", class: "menu-link" do
+              = image_tag "mig.jpeg"
+              マイページ
+      - else
+        .top__header__menu__right
+          = link_to new_user_registration_path do
+            .top__header__menu__right__new-acount 新規会員登録
+          = link_to new_user_session_path do
+            .top__header__menu__right__login ログイン

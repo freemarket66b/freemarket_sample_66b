@@ -1,14 +1,3 @@
-@mixin awesome {
-  font-weight: bold;
-  display: inline-block;
-  font: normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-}
-
-@mixin tomato {
-  color: #ea352d;
-}
 
 header {
   background-color: #fff;
@@ -74,6 +63,7 @@ header {
       font-size: 14px;
       height: 33px;
       &__left {
+        margin-top: 7px;
         display: flex;
         &__category {
           margin-right: 10px;
@@ -87,7 +77,8 @@ header {
           font-weight: bold;
         }
         i {
-          
+          margin-right: 4px;
+          color: rgb(234, 53, 45);
         }
       }
       &__right {
@@ -96,6 +87,63 @@ header {
           text-decoration: none;
           color: #333;
         }
+        &__likes {
+          margin: 0 14px;
+          display: flex;
+
+        }
+        &__notifi {
+          margin: 0 14px;
+          display: flex;
+        }
+        &__todo {
+          margin: 0 14px;
+          display: flex;
+        }
+        &__my-page {
+          margin: 0 14px;
+          width: 100px;
+          text-align: right;
+          position: relative;
+          img {
+            height: 32px;
+            border-radius: 50%;
+            position: absolute;
+            left: -8      px;
+            top: -5px;
+          }
+        }
+        i {
+          font-size: 18px;
+          color: rgb(204, 204, 204);
+          margin-right: 10px;
+        }
+        
+
+        &__new-acount {
+          background-color: rgb(234, 53, 45);
+          display: block;
+          border-width: 1px;
+          color: white;
+          border-style: solid;
+          border-color: rgb(234, 53, 45);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 4px 8px;
+        }
+        &__login {
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 149, 238);
+          display: block;
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(0, 149, 238);
+          border-image: initial;
+          border-radius: 4px;
+          padding: 4px 8px;
+          transition: all 0.3s ease-out 0s;
+          margin-left: 10px;
+        }
       }
     }
-  }
+}
