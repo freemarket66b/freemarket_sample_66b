@@ -16,12 +16,12 @@
             %svg.svg-inline--fa.fa-google.fa-w-16{"aria-hidden" => "true", "data-icon" => "google", "data-prefix" => "fab", focusable: "false", role: "img", viewbox: "0 0 488 512", xmlns: "http://www.w3.org/2000/svg", class: "google-logo"}
               %path{d: "M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z", fill: "currentColor"}
               %p.ggl-login Googleでログイン
-      -# .login-form
-      -#   = form_with model: @user, url: user_session_path, id: 'new_user', class: 'form', local: true do |f|
-      -#     = f.text_field :email, placeholder: "メールアドレス", class: "email-address", value: ""
-      -#     = f.text_field :password, placeholder: "パスワード", type: "password", class: "email-address", value: ""
+      .login-form
+        = form_for(resource, as: resource_name, url: session_path(resource_name), action: '/login/', method: 'POST', novalidate: 'novalidate') do |f|
+          = f.text_field :email, placeholder: "メールアドレス", class: "email-address", value: ""
+          = f.text_field :password, placeholder: "パスワード", type: "password", class: "email-address", value: ""
           .recaptcha
-            = recaptcha_tags
+            -# = recaptcha_tags
           = f.submit new_user_registration_path, value: "ログイン", class:"submit"
           .forgot-password
             = link_to "パスワードをお忘れの方", new_user_password_path, class: "resetting"
