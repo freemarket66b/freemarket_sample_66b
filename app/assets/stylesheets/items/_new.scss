@@ -60,8 +60,7 @@
           height: 300px;
           width: 100%;
           margin-top: 25px;
-          margin-left:25px;
-          // margin-left: 100px;
+          margin-left:60px;
           .post{
             position: absolute;
             height: 300px;
@@ -89,7 +88,7 @@
           font-size:19px;
           span{
             background-color: red;
-            margin: 0 0 0 4px;
+            margin: 0 0 0 8px;
             padding: 2px 4px;
             border-radius: 4px;
             color: #fff;
@@ -115,7 +114,7 @@
         font-size:19px;
         span{
           background-color: red;
-          margin: 0 0 0 4px;
+          margin: 0 0 0 8px;
           padding: 2px 4px;
           border-radius: 4px;
           color: #fff;
@@ -170,7 +169,7 @@
             position: relative;
             z-index: 2;
             height: 48px;
-            padding: 0 16px;
+            margin: 5px 16px 20px 0px;
             border-radius: 4px;
             border: 1px solid #ccc;
             background: 0;
@@ -214,7 +213,7 @@
           position: relative;
           z-index: 2;
           height: 48px;
-          padding: 0 16px;
+          margin: 5px 16px 20px 0px;
           border-radius: 4px;
           border: 1px solid #ccc;
           background: 0;
@@ -264,13 +263,66 @@
     &__itemSubmitAndBack{
       padding: 40px;
       border-top: 1px solid #eee;
+      &__confirmation{
+        p{
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 25px;
+        }
+        a{
+          text-decoration: none;
+          color: #0099e8;
+        }
+      }
+      &__submit{
+        #btn{
+          margin: 40px 0 0;
+          font-weight: 300;
+          background: #ea352d;
+          border: 1px solid #ea352d;
+          color: #fff;
+          display: block;
+          width: 100%;
+          line-height: 60px;
+          font-size: 20px;
+          transition: all ease-out .3s;
+          cursor: pointer;
+          text-align: center;
+          outline: 0;
+          border-style: none;
+        }
+      }
+      &__back{
+        a{
+          width: 45%;
+          margin: 30px auto 0;
+          font-weight: 300;
+          background: #aaa;
+          border: 1px solid #aaa;
+          color: #fff;
+          display: block;
+          line-height: 60px;
+          font-size: 20px;
+          transition: all ease-out .3s;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+        }
+        
+      }
     }
   }
 }
   &__footer{
     width: 456px;
     height: 290px;
+    padding: 40px 0;
     margin: 0 auto;
+    text-align: center;
     background-color: #F5F5F5;
+    &__logo{
+      margin: 25px 0px;
+    }
   }
 }
