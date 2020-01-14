@@ -37,7 +37,7 @@
         max-width: 300px;
         height: 380px;
         background-color: whitesmoke;
-
+      }
 
       &__item-detail{
         float: right;
@@ -229,18 +229,6 @@
             color: black;
           }
         }
-      }
-
-      &__item-photo{
-       float: left;
-       height: 375px;
-       width: 300px;
-       background-color: violet;
-      }
-      &__item-detail{
-        float: right;
-        height: 420px;
-        width: 300px;
       }
     }
 
@@ -440,6 +428,287 @@
          margin-left: 10px;
        }
      }  
+    }
+  &__items-user-profile{
+    width: 700px;
+    height: 1600px;
+    margin: 0 auto;
+    // background-color: orange;
+    margin-top: 35px;
+    
+    &__user-items-container{
+      width: 700px;
+      height: 738px;
+      margin: 0 auto;
+      
+
+      &__items-box-head{
+        width: 700px;
+        height: 40px;
+        margin: 24px 0 8px;
+        
+        &__other{
+          color: #0099e8;
+          font-size: 22px;
+          padding: 5px;
+        }
+      }
+      &__items-box-content{
+        width: 700px;
+        height: 698px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        &__items-box{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__photo{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body{
+            padding: 16px;
+            height: 80px;
+            background-color: white;
+          }
+        }
+        &__items-box-1{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__photo-1{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body-1{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__items-box-2{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__photo-2{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body-2{
+            padding: 16px;
+            height: 80px;
+            background-color: white;
+          }
+        }
+        &__items-box-3{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          
+          &__photo-3{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body-3{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__items-box-4{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          left: 240px;
+          
+          &__photo-4{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body-4{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__items-box-5{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          left: 480px;
+          
+          &__photo-5{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__body-5{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+      }
+      
+    }
+    &__blands-items-container{
+      width: 700px;
+      height: calc(1500px - 787px);
+      margin: 0 auto;
+      
+
+      &__blands-box-head{
+        width: 700px;
+        height: 40px;
+        margin: 50px 0 8px;
+        
+        &__blands-other{
+          color: #0099e8;
+          font-size: 22px;
+          padding: 5px;
+        }
+      }
+      &__blands-items-box-content{
+        width: 700px;
+        height: 698px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+        &__blands-items-box{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__blands-photo{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body{
+            padding: 16px;
+            height: 80px;
+            background-color: white;
+          }
+        }
+        &__blands-items-box-1{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__blands-photo-1{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body-1{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__blands-items-box-2{
+          width: 220px;
+          height: 330px;
+          margin: 0 20px 20px 0;
+          
+          &__blands-photo-2{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body-2{
+            padding: 16px;
+            height: 80px;
+            background-color: white;
+          }
+        }
+        &__blands-items-box-3{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          
+          &__blands-photo-3{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body-3{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__blands-items-box-4{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          left: 240px;
+          
+          &__blands-photo-4{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body-4{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+        &__blands-items-box-5{
+          width: 220px;
+          height: 330px;
+          position: absolute;
+          top: 366px;
+          left: 480px;
+          
+          &__blands-photo-5{
+            width: 220px;
+            height: 220px;
+            background-color: skyblue;
+          }
+          &__blands-body-5{
+            padding: 16px;
+            height: 80px;
+            background-color:white;
+          }
+        }
+      }
+    }
+  }
+  &__bread-crumbs-content{
+    width: 700px;
+    height: 30px;
+    border-top: 1px solid #eee;
+    margin-top: 98px;
+    padding: 16px 0px;
+    display: flex;
+    
+    &__mercari-btn{
+      height: 18px;
+      width: 66px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    &__brand-btn{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      padding-left: 10px;
     }
   }
 }
