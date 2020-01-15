@@ -1,19 +1,8 @@
 .body{
   background-color: rgb(245, 245, 245);
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 .main {
-  width: 100%;
-  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
-  .slide {
-    height: 340px;
-    .slide-image{
-      width: 100%;
-      height: 390px;
-      box-sizing: border-box;
-    }
+
     .slick-dots {
       li {
         font-size: 20px ;
@@ -24,7 +13,6 @@
         }
       }
     }
-  }
 }
 .top-nav {
   width: 100%;
