@@ -9,7 +9,7 @@ header {
 }
 
 .top__header {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto;
   padding-top: 8px;
   &__upper {
@@ -110,7 +110,7 @@ header {
             height: 32px;
             border-radius: 50%;
             position: absolute;
-            left: -8      px;
+            left: -8px;
             top: -5px;
           }
         }
