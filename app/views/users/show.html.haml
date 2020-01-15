@@ -1,15 +1,15 @@
 .wrapper
 
   = render "layouts/header"
-  -# - breadcrumb :show
   -# = render "layouts/breadcrumbs"
+  = render "layouts/side-barMypage"
   .bodyMypage.clearfix
     .main
       .user
         .thumbnail
           = link_to ""
           .icon
-            =image_tag "/ramen.jpg"
+            =image_tag "my-page-背景.png"
           %h2.nickname= @nickname 
           .records
             .value
@@ -32,7 +32,7 @@
             %li.links
               = link_to "", class: "link" do
                 .figure
-                  = image_tag "/logo_red.svg", class: "box"
+                  = image_tag "logo_red.svg", class: "box"
                 .form
                   .form__text
                     <お買い物応援!> ¥1,000の商品を実質1円でご購入いただけます！
@@ -43,7 +43,7 @@
             %li.links
               = link_to "", class: "link" do
                 .figure
-                  = image_tag "/logo_red.svg", class: "box"
+                  = image_tag "logo_red.svg", class: "box"
                 .form
                   .form__text
                     明日、P999還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
@@ -69,6 +69,4 @@
             %li.trades__name
               取引中の商品がありません
 
-  = render "layouts/side-barMypage"
-  -# = render "devise/shared/red-btn"
-  -# = render "layouts/footer"
+  = render "layouts/footer"
