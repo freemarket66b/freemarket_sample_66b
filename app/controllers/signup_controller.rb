@@ -16,8 +16,7 @@ class SignupController < ApplicationController
   end
 
   def signup5
-    sign_in User.find(session[:id]) unless user_signed_in?
-    
+    sign_in User.find(session[:id]) unless user_signed_in?    
   end
 
   def validates_signup2
