@@ -1,0 +1,119 @@
+.body
+  .signup-header
+    .signup-header__box
+      .signup-header-logo
+        = link_to image_tag("fmarket_logo_red.svg"), root_path
+      %nav.signupBar
+        %ol.signupList
+          %li.signupInfo.marker.now-point
+            .mark-name1
+              会員情報
+            .marking
+              .mark
+              .mark-line
+          %li.signupTell
+            .mark-name2
+              電話番号認証
+            .marking
+              .mark
+              .mark-line
+          %li.signupAdd
+            .mark-name3
+              お届け先住所入力
+            .marking
+              .mark
+              .mark-line
+          %li.signupHowToPay
+            .mark-name4
+              支払い方法
+            .marking
+              .mark
+              .mark-line
+          %li.signupComplete
+            .mark-name5
+              完了
+            .marking
+              .mark
+              .mark-line
+  .push-info
+    .info-top
+      %h2
+        会員情報入力
+    = form_for @user, url: signup3_signup_index_path, method: :get do |f|
+      .formbox
+        .form-group
+          %label.nickname-new
+            = f.label :ニックネーム
+          %span.must-content
+            必須
+          = f.text_field :nickname, class:"nickname-info", placeholder: "例) メルカリ太郎", maxlength: "20"
+          - if @user.errors.any?
+            %p.error-message ニックネームを入力して下さい
+        .form-group
+          %label.mailAddless-new
+            メールアドレス
+          %span.must-content
+            必須
+          = f.text_field :email, class:"mailAddless-info", placeholder: "PC・携帯どちらでも可"
+          - if @user.errors.any?
+            %p.error-message メールアドレスを入力して下さい 例)test@test.com
+        .form-group
+          %label.password-new
+            パスワード
+          %span.must-content
+            必須
+          = f.password_field :password, class:"password-info", value: "", placeholder: "7文字以上"
+          - if @user.errors.any?
+            %p.error-message パスワードを入力して下さい
+          .check-box
+            %label.checkbox
+              %input.password-check{type: "checkbox"}
+                パスワードを表示する
+        .form-group
+          %h3.check-person
+            本人確認
+          %p
+            安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+        .form-group
+          %label.kanjiName-new
+            お名前(全角)
+          %span.must-content
+            必須
+          .input-parrent
+            = f.text_field :last_name, class: "kanji1stName-info", value: "", placeholder: "例) 山田", maxlength: "20"
+            = f.text_field :first_name, class: "kanji2ndName-info", value: "" , placeholder: "例) 彩", maxlength: "20"
+          - if @user.errors.any?
+            %p.error-message 氏名を入力して下さい
+        .form-group
+          %label.kanaName-new
+            お名前カナ(全角)
+          %span.must-content
+            必須
+          .input-parrent
+            = f.text_field :last_name_kana, class: "kana1stName-info", value: "" , placeholder: "例) ヤマダ"
+            = f.text_field :first_name_kana, class: "kana2ndName-info", value: "" , placeholder: "例) アヤ"
+          - if @user.errors.any?
+            %p.error-message 氏名(フリガナ)を入力して下さい
+        .form-group
+          %label.birthday-new
+            生年月日
+          %span.must-content
+            必須
+          .select-parrent
+            =render "deviseGo/option-birthYear"
+          - if @user.errors.any?
+            %p.error-message 生年月日を選択して下さい
+          %p.must-text ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+        .form-robot  
+          .recaptcha
+            -# = recaptcha_tags
+        .form-group
+          .center-contents
+            「次へ進む」のボタンを押すことにより、
+            =link_to "利用規約", "https://www.mercari.com/jp/tos_list/", class: "link-for-user"
+            に同意したものとみなします
+          = f.submit "次へ進む", class: "go-ahead"
+        =link_to "https://www.mercari.com/jp/help_center/article/423/", class: "link-for-user-info" do
+          本人情報の登録について
+          =fa_icon'chevron-right'
+  =render "devise/shared/footer-login"
