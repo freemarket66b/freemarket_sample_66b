@@ -1,4 +1,4 @@
-= form_with url: pay_card_index_path, local: true do |f|
+= form_for "#" do |f|
   =f.select :exp_month, class: "cardMonth-info", name: "exp_month", type: "text" do
     %option{:value => ""} --
     %option{:value => "01"} 01
