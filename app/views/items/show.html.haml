@@ -1,15 +1,48 @@
 .item-box-container
   
-  
+  = render "layouts/header"
 
   .item-box-container__item-box
     .item-box-container__item-box__item-name
-      トークハット
+      NIKE スニーカー
     .item-box-container__item-box__item-wording
-      『トークハット』は、482回の取引実績を持つKANNA❥プロフ必読！さんから出品されました。エイミーイストワール（ハンチング/ベレー帽/レディース）の商品で、北海道から1~2日で発送されます。
+      『NIKE スニーカー』は、482回の取引実績を持つ小林さんから出品されました。NIKE（SHOES/スニーカー/メンズ）の商品で、北海道から1~2日で発送されます。
     .item-box-container__item-box__item-main-content
       .item-box-container__item-box__item-main-content__item-photo
-        = image_tag 'nike-jpg.jpeg', class: 'item-photo', height:'300', width:'300'
+        .item-box-container__item-box__item-main-content__item-photo__top
+          = link_to '#' , class: 'top' do
+            = image_tag 'スニーカー1.webp', class: 'photo__top', height:'280', width:'280'
+        .item-box-container__item-box__item-main-content__item-photo__sub
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-1
+            = link_to '#' , class: 'sub-1' do
+              = image_tag 'スニーカー2.webp', class: 'sub-1', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-2
+            = link_to '#' , class: 'sub-2' do
+              = image_tag 'スニーカー3.webp', class: 'sub-2', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-3
+            = link_to '#' , class: 'sub-3' do
+              = image_tag 'スニーカー4.webp', class: 'sub-3', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-4
+            = link_to '#' , class: 'sub-4' do
+              = image_tag 'スニーカー5.webp', class: 'sub-4', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-5
+            = link_to '#' , class: 'sub-5' do
+              = image_tag 'スニーカー6.webp', class: 'sub-5', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-6
+            = link_to '#' , class: 'sub-6' do
+              = image_tag 'スニーカー2.webp', class: 'sub-6', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-7
+            = link_to '#' , class: 'sub-7' do
+              = image_tag 'スニーカー3.webp', class: 'sub-7', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-8
+            = link_to '#' , class: 'sub-8' do
+              = image_tag 'スニーカー4.webp', class: 'sub-8', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-9
+            = link_to '#' , class: 'sub-9' do
+              = image_tag 'スニーカー5.webp', class: 'sub-9', height:'60', width:'60'
+          .item-box-container__item-box__item-main-content__item-photo__sub__sub-10
+            = link_to '#' , class: 'sub-10' do
+              = image_tag 'スニーカー6.webp', class: 'sub-10', height:'60', width:'60'
       .item-box-container__item-box__item-main-content__item-detail
         .item-box-container__item-box__item-main-content__item-detail__table
           .item-box-container__item-box__item-main-content__item-detail__table__colmun-left
@@ -88,7 +121,8 @@
         相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       .item-box-container__item-detail-message__message-container__comment-box
       .item-box-container__item-detail-message__message-container__comment-button
-        コメントする
+        = link_to '#' , class: 'comment-button' do
+          コメントする
   
   .item-box-container__item-nav
     .item-box-container__item-nav__link-prev
@@ -122,34 +156,94 @@
       .item-box-container__items-user-profile__user-items-container__items-box-content
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__photo
-            = image_tag 'nike-jpg.jpeg', class: 'items-box__photo', height:'220', width:'220'
+            = link_to '#' , class: 'photo' do
+              = image_tag 'スニーカー1.webp', class: 'items-box__photo', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body
-            商品名、プライス
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body__items-box-name
+              = link_to '#' , class: 'items-box-name' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body__items-box-num
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body__items-box-num__items-box-price
+                = link_to '#' , class: 'items-box-price' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box__body__items-box-num__items-box-like
+                = link_to '#' , class: 'items-box-like' do
+                  ♡ 1
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__photo-1
-            商品写真1
+            = link_to '#' , class: 'photo-1' do
+              = image_tag 'スニーカー1.webp', class: 'photo-1', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__body-1
-            商品名、プライス1
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__body-1__items-box-name-1
+              = link_to '#' , class: 'items-box-name-1' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__body-1__items-box-num-1
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__body-1__items-box-num-1__items-box-price-1
+                = link_to '#' , class: 'items-box-price-1' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-1__body-1__items-box-num-1__items-box-like-1
+                = link_to '#' , class: 'items-box-like-1' do
+                  ♡ 1
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__photo-2
-            商品写真2
+            = link_to '#' , class: 'photo-2' do
+              = image_tag 'スニーカー1.webp', class: 'photo-2', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__body-2
-            商品名、プライス2
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__body-2__items-box-name-2
+              = link_to '#' , class: 'items-box-name-2' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__body-2__items-box-num-2
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__body-2__items-box-num-2__items-box-price-2
+                = link_to '#' , class: 'items-box-price-2' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-2__body-2__items-box-num-2__items-box-like-2
+                = link_to '#' , class: 'items-box-like-2' do
+                  ♡ 1
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__photo-3
-            商品写真3
+            = link_to '#' , class: 'photo-3' do
+              = image_tag 'スニーカー1.webp', class: 'photo-3', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__body-3
-            商品名、プライス3
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__body-3__items-box-name-3
+              = link_to '#' , class: 'items-box-name-3' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__body-3__items-box-num-3
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__body-3__items-box-num-3__items-box-price-3
+                = link_to '#' , class: 'items-box-price-3' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-3__body-3__items-box-num-3__items-box-like-3
+                = link_to '#' , class: 'items-box-like-3' do
+                  ♡ 1
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__photo-4
-            商品写真4
+            = link_to '#' , class: 'photo-4' do
+              = image_tag 'スニーカー1.webp', class: 'photo-4', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__body-4
-            商品名、プライス4
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__body-4__items-box-name-4
+              = link_to '#' , class: 'items-box-name-4' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__body-4__items-box-num-4
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__body-4__items-box-num-4__items-box-price-4
+                = link_to '#' , class: 'items-box-price-4' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-4__body-4__items-box-num-4__items-box-like-4
+                = link_to '#' , class: 'items-box-like-4' do
+                  ♡ 1
         .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__photo-5
-            商品写真5
+            = link_to '#' , class: 'photo-5' do
+              = image_tag 'スニーカー1.webp', class: 'photo-5', height:'220', width:'220'
           .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__body-5
-            商品名、プライス5
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__body-5__items-box-name-5
+              = link_to '#' , class: 'items-box-name-5' do
+                スニーカー
+            .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__body-5__items-box-num-5
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__body-5__items-box-num-5__items-box-price-5
+                = link_to '#' , class: 'items-box-price-5' do
+                  ¥12,000
+              .item-box-container__items-user-profile__user-items-container__items-box-content__items-box-5__body-5__items-box-num-5__items-box-like-5
+                = link_to '#' , class: 'items-box-like-5' do
+                  ♡ 1
     .item-box-container__items-user-profile__blands-items-container
       .item-box-container__items-user-profile__blands-items-container__blands-box-head
         .item-box-container__items-user-profile__blands-items-container__blands-box-head__blands-other
@@ -158,34 +252,94 @@
       .item-box-container__items-user-profile__blands-items-container__blands-items-box-content
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-photo
-            商品写真
+            = link_to '#' , class: 'blands-photo' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-body
-            商品名、プライス
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-body__blands-items-box-name
+              = link_to '#' , class: 'blands-items-box-name' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-body__blands-items-box-num
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-body__blands-items-box-num__blands-items-box-price
+                = link_to '#' , class: 'blands-items-box-price' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box__blands-body__blands-items-box-num__blands-items-box-like
+                = link_to '#' , class: 'blands-items-box-like' do
+                  ♡ 1
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-photo-1
-            商品写真1
+            = link_to '#' , class: 'blands-photo-1' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo-1', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-body-1
-            商品名、プライス1
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-body-1__blands-items-box-name-1
+              = link_to '#' , class: 'blands-items-box-name-1' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-body-1__blands-items-box-num-1
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-body-1__blands-items-box-num-1__blands-items-box-price-1
+                = link_to '#' , class: 'blands-items-box-price-1' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-1__blands-body-1__blands-items-box-num-1__blands-items-box-like-1
+                = link_to '#' , class: 'blands-items-box-like-1' do
+                  ♡ 1
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-photo-2
-            商品写真2
+            = link_to '#' , class: 'blands-items-box-name-2' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo-2', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-body-2
-            商品名、プライス2
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-body-2__blands-items-box-name-2
+              = link_to '#' , class: 'blands-items-box-name-2' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-body-2__blands-items-box-num-2
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-body-2__blands-items-box-num-2__blands-items-box-price-2
+                = link_to '#' , class: 'blands-items-box-price-2' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-2__blands-body-2__blands-items-box-num-2__blands-items-box-like-2
+                = link_to '#' , class: 'blands-items-box-like-2' do
+                  ♡ 1
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-photo-3
-            商品写真3
+            = link_to '#' , class: 'blands-photo-3' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo-3', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-body-3
-            商品名、プライス3
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-body-3__blands-items-box-name-3
+              = link_to '#' , class: 'blands-items-box-name-3' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-body-3__blands-items-box-num-3
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-body-3__blands-items-box-num-3__blands-items-box-price-3
+                = link_to '#' , class: 'blands-items-box-price-3' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-3__blands-body-3__blands-items-box-num-3__blands-items-box-like-3
+                = link_to '#' , class: 'blands-items-box-like-3' do
+                  ♡ 1
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-photo-4
-            商品写真4
+            = link_to '#' , class: 'blands-photo-4' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo-4', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-body-4
-            商品名、プライス4
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-body-4__blands-items-box-name-4
+              = link_to '#' , class: 'blands-items-box-name-4' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-body-4__blands-items-box-num-4
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-body-4__blands-items-box-num-4__blands-items-box-price-4
+                = link_to '#' , class: 'blands-items-box-price-4' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-4__blands-body-4__blands-items-box-num-4__blands-items-box-like-4
+                = link_to '#' , class: 'blands-items-box-like-4' do
+                  ♡ 1
         .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-photo-5
-            商品写真5
+            = link_to '#' , class: 'photo-5' do
+              = image_tag 'スニーカー1.webp', class: 'blands-photo-5', height:'220', width:'220'
           .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-body-5
-            商品名、プライス5
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-body-5__blands-items-box-name-5
+              = link_to '#' , class: 'blands-items-box-name-5' do
+                スニーカー
+            .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-body-5__blands-items-box-num-5
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-body-5__blands-items-box-num-5__blands-items-box-price-5
+                = link_to '#' , class: 'blands-items-box-price-5' do
+                  ¥12,000
+              .item-box-container__items-user-profile__blands-items-container__blands-items-box-content__blands-items-box-5__blands-body-5__blands-items-box-num-5__blands-items-box-like-5
+                = link_to '#' , class: 'blands-items-box-like-5' do
+                  ♡ 1
     .item-box-container__bread-crumbs-content
       .item-box-container__bread-crumbs-content__mercari-btn
         = link_to '#' , class: 'mercari-btn' do
