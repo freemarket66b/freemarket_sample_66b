@@ -114,3 +114,31 @@
     }
   }
 }
+
+a.sell-items-btn {
+  text-decoration: none;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  text-align: center;
+  z-index: 2;
+  .sell-items-btn {
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    background-color: rgb(234, 53, 45);
+    border-radius: 50%;
+    text-decoration: none;
+    p {
+      color: white;
+      font-size: 22px;
+      padding-top: 26px;
+
+    }
+    i {
+      color: white;
+      font-size: 60px;
+      margin-top: 5px;
+    }
+  }
+}

@@ -100,5 +100,9 @@
                 %span ¥1,000
             .main__items__box__list-index
               %span テスト
+  = link_to new_item_path, class:"sell-items-btn" do
+    .sell-items-btn
+      %p 出品
+      = fa_icon "camera"
                     
 = render "layouts/footer"
