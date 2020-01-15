@@ -40,7 +40,7 @@
       %h2 支払い方法
     .credit-box__body
       .push-box
-        = form_with url: pay_card_index_path, id: 'inputForm', name: "inputForm", local: true do |f|
+        = form_for "#" do |f|
           .formbox
             .form-group-credit
               %label.yubinNum-new
