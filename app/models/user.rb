@@ -62,6 +62,6 @@ class User < ApplicationRecord
         user_id: user.id
       )
     end
-    user
+    
   end
 end
