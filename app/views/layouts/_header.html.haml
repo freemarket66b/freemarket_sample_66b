@@ -19,19 +19,19 @@
       - if user_signed_in?
         .top__header__menu__right
           .top__header__menu__right__likes
-            = link_to "https://www.mercari.com/jp/mypage/like/history/", class: "menu-link" do
+            = link_to "#", class: "menu-link" do
               = fa_icon "heart"
               いいね！一覧
           .top__header__menu__right__notifi
-            = link_to "https://www.mercari.com/jp/mypage/notification/", class: "menu-link" do
+            = link_to "#", class: "menu-link" do
               = fa_icon "bell"
               お知らせ
           .top__header__menu__right__todo
-            = link_to "https://www.mercari.com/jp/mypage/todo/", class: "menu-link" do
+            = link_to "#", class: "menu-link" do
               = fa_icon "check"
               ToDoリスト
           .top__header__menu__right__my-page
-            = link_to destroy_user_session_path, method: :delete do
+            = link_to "/users/#{current_user.id}/" do
               = image_tag "mig.jpeg"
               マイページ
       - else

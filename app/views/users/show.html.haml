@@ -1,8 +1,6 @@
 .wrapper
-
   = render "layouts/header"
   -# = render "layouts/breadcrumbs"
-  = render "layouts/side-barMypage"
   .bodyMypage.clearfix
     .main
       .user
@@ -68,5 +66,6 @@
           %ul.trades
             %li.trades__name
               取引中の商品がありません
-
-  = render "layouts/footer"
+    = render "layouts/side-barMypage"
+    = render "items/sell-btn"
+= render "layouts/footer"
