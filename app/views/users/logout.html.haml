@@ -1,0 +1,14 @@
+= render "layouts/header"
+- breadcrumb :logout
+-# = render "layouts/breadcrumbs"
+.logout-main
+  .both-content-log
+    .logout-body
+      %form
+        =link_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-logout"&&"logout-btn"
+
+    = render "layouts/side-barMypage"
+
+
+  = render "layouts/footer"
+
