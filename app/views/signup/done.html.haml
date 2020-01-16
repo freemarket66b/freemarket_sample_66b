@@ -45,5 +45,18 @@
         .formbox
           =link_to root_path do
             %button.go-ahead メルカリをはじめる
+
+    .footer__upper
+      .footer__upper__box
+        .footer__upper__box__left
+          %p.row1 スマホでかんたんフリマアプリ
+          %p.row2 今すぐ無料ダウンロード！
+          .footer__upper__box__logos
+            = image_tag "logo_red.svg", alt: "", class: "fmarketlogo"
+            = link_to image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2177740229", height: "40", class: "appstore-link"), "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8"
+            = link_to image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2177740229", height: "40", class: "googleplay-link"),"https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja"
+        .footer__upper__box__right
+          = image_tag "smart-phone.png", alt: ""
       
   =render "devise/shared/footer-login"
+  
