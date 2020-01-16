@@ -1,0 +1,64 @@
+= render "layouts/header"
+.user-info
+  .user-info__content
+    .user-info__content__head
+      %p.user-info__content__head__title 本人情報の登録
+      = form_for @user, url:user_path, method: :patch do |f|
+        .user-info__content__msg
+          %p お客さまの本人情報をご登録ください。
+          %p 登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
+          %p.user-info__content__msg-right
+            =link_to "本人確認書類のアップロードについて", root_path
+            = fa_icon "angle-right"
+        .form-group
+          %label.name お名前
+          %p.show-data
+            = @user.last_name
+            = @user.first_name
+        .form-group
+          %label お名前カナ
+          %p.show-data
+            = @user.last_name_kana
+            = @user.first_name_kana
+        .form-group
+          %label{for: "birthday"} 生年月日
+          %p.show-data
+            = @user.birth_year
+            %nobr /
+            = @user.birth_month
+            %nobr /
+            = @user.birth_day
+
+        .form-group
+          %label{for: "postal-code"} 郵便番号
+          %span.form-arbitrary 任意
+          = f.text_field :postal_code, class:"input-default", value:@user.postal_code, placeholder: "例）123-4567 ハイフンが必要です", maxlength: "8"
+        .form-group
+          %label{for: "prefectures"} 都道府県
+          %span.form-arbitrary 任意
+          .pre-wrap
+            = f.collection_select :prefectures, Prefecture.all, :id, :name, {}, {class: 'select-default'}
+
+        .form-group
+          %label 市区町村
+          %span.form-arbitrary 任意
+          = f.text_field :city, class:"input-default", value:@user.city, placeholder: "例) 横浜市緑区", maxlength: "30"
+        .form-group
+          %label{for: "address1_label"} 番地
+          %span.form-arbitrary 任意
+          = f.text_field :address, class:"input-default", value:@user.address, placeholder: "例) 青山1−1−1", maxlength: "30"
+        .form-group
+          %label{for: "address2_label"} 建物名
+          %span.form-arbitrary 任意
+          = f.text_field :building_name, class:"input-default", value:@user.building_name, placeholder: "例) 柳ビル103", maxlength: "30"
+
+        = f.submit "登録する", class: "btn-red"
+
+
+        %p.user-info__content__bottom__msg-right
+          =link_to "本人情報の登録について","https://www.mercari.com/jp/help_center/article/423/", class: "link"
+          = fa_icon "angle-right"
+
+    = render "layouts/side-barMypage"
+= render "layouts/footer"
+= render "items/sell-btn"
