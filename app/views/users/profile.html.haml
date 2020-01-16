@@ -1,6 +1,6 @@
 = render "layouts/header"
 - breadcrumb :profile
-= render "layouts/breadcrumbs"
+-# = render "layouts/breadcrumbs"
 .profile-main
   .both-content
     .profile-main__contents
@@ -11,12 +11,12 @@
           .wrapper
             %clearfix
             .icon-image
-              =image_tag("//static.mercdn.net/thumb/members/374697252.jpg?1413894677",width:"60", height:"60", class: "prof-photo")
-            = f.text_field :nickname, class:"input-default", value:@user.nickname, placeholder: "例)AYA☆セール中", maxlength: "20"
+              =image_tag("nike-1.jpg",width:"60", height:"60", class: "prof-photo")
+            = f.text_field :nickname, class:"input-default", value:@user.nickname, placeholder: "例)セール中", maxlength: "20"
 
         .profile-content
-          = f.text_area :profile, class:"textarea-default", value: @user.profile, placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", maxlength: "300"
+          = f.text_area :profile, class:"textarea-default", value: @user.profile, placeholder: "例）こんにちは! ご覧いただきありがとうございます！気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪", maxlength: "300"
           = f.submit "変更する", class: "button"
     = render "layouts/side-barMypage"
+    = render "items/sell-btn"
 = render "layouts/footer"
-= render "devise/shared/red-btn"
