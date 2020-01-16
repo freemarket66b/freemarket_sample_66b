@@ -1,10 +1,5 @@
 .body
-  .body__header
-    .body__header__logo
-      %h1
-        = link_to "#" do
-          = image_tag 'fmarket_logo_red.svg', class: 'body__header__logo__fmi', height:'60', width:'200'
-          
+  = render 'items/headerLogo'
   .body__content
     = form_for @item, local: true do |form|
       .body__content__itemInfo
@@ -107,12 +102,6 @@
           .body__content__formArea__itemSubmitAndBack__back
             = link_to root_path do
               戻る
-  .body__footer
-    プライバシーポリシー    Fmarket利用規約    特定商取引に関する表記
-    = link_to "#" do
-      = image_tag 'logo_gray.svg' ,class:"body__footer__logo",height:'150', width:'150'
-    %p
-      %small
-        © Fmarket, Inc.
+  = render 'items/footerLogo'
 
     

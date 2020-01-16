@@ -1,0 +1,63 @@
+.body
+  = render 'items/headerLogo'
+  .body__content
+    .body__content__title
+      購入内容の確認
+    .body__content__itemImageAndName
+      .body__content__itemImageAndName__image
+        %img{src: "https://static.mercdn.net/thumb/photos/m57851143540_1.jpg?1578989905", width:"100", height:"100"}
+      .body__content__itemImageAndName__name
+        %h1
+          7つの習慣 成功には原則があった
+        %h2
+          ¥640 （税込）送料込み
+    .body__content__buyInfo
+      .body__content__buyInfo__formBox
+        .body__content__buyInfo__formBox__pay
+          .body__content__buyInfo__formBox__pay__titleAndprice
+            .body__content__buyInfo__formBox__pay__titleAndprice__title
+              支払金額
+            .body__content__buyInfo__formBox__pay__titleAndprice__price
+              ¥640
+          .body__content__buyInfo__formBox__pay__pointUse
+            = fa_icon 'square'
+            ポイントを使用 (所持ポイント: P0)
+        .body__content__buyInfo__formBox__cardInfo
+          .body__content__buyInfo__formBox__cardInfo__payWay
+            .body__content__buyInfo__formBox__cardInfo__payWay__titleAndLink
+              .body__content__buyInfo__formBox__cardInfo__payWay__titleAndLink__title
+                支払い方法
+              .body__content__buyInfo__formBox__cardInfo__payWay__titleAndLink__link
+                = link_to "#" do
+                  変更する
+          .body__content__buyInfo__formBox__cardInfo__cardNumber
+            %h3
+              クレジットカード
+            %h4
+              ************2275
+            %h5
+              有効期限 09 / 21
+          .body__content__buyInfo__formBox__cardInfo__logo
+            %img{src:"//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2091621301",width:"59",height:"29x"}
+        .body__content__buyInfo__formBox__adressInfo
+          .body__content__buyInfo__formBox__adressInfo__titleAndLink
+            .body__content__buyInfo__formBox__adressInfo__titleAndLink__title
+              配達先
+            .body__content__buyInfo__formBox__adressInfo__titleAndLink__link
+              = link_to "#" do
+                変更する
+          .body__content__buyInfo__formBox__adressInfo__zipInfo
+            %h6
+              〒181-0015
+            %h7
+              東京都 三鷹市 大沢 3-10-2 国際基督教大学 カナダハウス
+            %p
+              いわさ よしき
+
+        .body__content__buyInfo__formBox__buyBottunArea
+          = form_for @item do |form|
+            .body__content__buyInfo__formBox__buyBottunArea__buyButton
+              = form.submit value: "購入する", id:"btn"
+            
+
+  = render 'items/footerLogo'
