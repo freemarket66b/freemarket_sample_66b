@@ -5,7 +5,7 @@
       購入内容の確認
     .body__content__itemImageAndName
       .body__content__itemImageAndName__image
-        %img{src: "https://static.mercdn.net/thumb/photos/m57851143540_1.jpg?1578989905", width:"100", height:"100"}
+        = image_tag "sample.jpeg", height:"120", width:"100"
       .body__content__itemImageAndName__name
         %h1
           7つの習慣 成功には原則があった
@@ -38,7 +38,7 @@
             %h5
               有効期限 09 / 21
           .body__content__buyInfo__formBox__cardInfo__logo
-            %img{src:"//www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2091621301",width:"59",height:"29x"}
+            = image_tag "logo_visa.gif", width:"59",height:"29x"
         .body__content__buyInfo__formBox__adressInfo
           .body__content__buyInfo__formBox__adressInfo__titleAndLink
             .body__content__buyInfo__formBox__adressInfo__titleAndLink__title
