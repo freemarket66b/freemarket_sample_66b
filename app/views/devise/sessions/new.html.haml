@@ -1,28 +1,25 @@
-.body
-  = render "devise/shared/header-login"
-  .container
-    .login-panel
-      .register
-        %p.no-account アカウントをお持ちでない方はこちら
-        = link_to "新規会員登録", new_user_registration_path, class:"signup-btn"""
-      .social-login
-        %button.facebook
-          = link_to user_facebook_omniauth_authorize_path do
-            %svg.svg-inline--fa.fa-facebook-square.fa-w-14{"aria-hidden" => "true", "data-icon" => "facebook-square", "data-prefix" => "fab", focusable: "false", role: "img", viewbox: "0 0 448 512", xmlns: "http://www.w3.org/2000/svg", class: "facebook-logo"}
-              %path{d: "M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z", fill: "currentColor"}
-              %p.fb-login Facebookでログイン
-        %button.google
-          = link_to user_google_oauth2_omniauth_authorize_path do
-            %svg.svg-inline--fa.fa-google.fa-w-16{"aria-hidden" => "true", "data-icon" => "google", "data-prefix" => "fab", focusable: "false", role: "img", viewbox: "0 0 488 512", xmlns: "http://www.w3.org/2000/svg", class: "google-logo"}
-              %path{d: "M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z", fill: "currentColor"}
-              %p.ggl-login Googleでログイン
-      .login-form
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          = f.text_field :email, placeholder: "メールアドレス", class: "email-address", value: ""
-          = f.text_field :password, placeholder: "パスワード", type: "password", class: "email-address", value: ""
-          .recaptcha
-            -# = recaptcha_tags
-          = f.submit new_user_registration_path, value: "ログイン", class:"submit"
-          .forgot-password
-            = link_to "パスワードをお忘れの方", new_user_password_path, class: "resetting"
+= render "devise/shared/header-login"
+.login-page
+  .login-page__no-account
+    %p アカウントをお持ちでない方はこちら
+    = link_to new_user_registration_path do
+      .login-page__no-account__new-user
+        新規会員登録
+  .login-page__sns-login
+    = link_to user_facebook_omniauth_authorize_path do
+      .login-page__sns-login__facebook
+        = fa_icon 'facebook'
+        Facebookでログイン
+    = link_to user_google_oauth2_omniauth_authorize_path do
+      .login-page__sns-login__google
+        = image_tag("https://quartet-communications.com/wp-content/uploads/2017/05/Google_-G-_Logo.svg_.png")
+        Googleでログイン
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .login-page__input
+      = f.email_field :email, placeholder: "メールアドレス",  value: "", class:'login-page__input__email'
+      = f.password_field :password, placeholder: "パスワード", class:'login-page__input__password'
+      .login-page__input__recaptcha
+        = image_tag("https://i.gyazo.com/ce5541bb0a64b4d3a55f24edb0f9b140.png")
+      = f.submit "ログイン", class:'login-page__input__submit'
+      = link_to 'パスワードをお忘れの方', new_user_password_path
   = render "devise/shared/footer-login"
