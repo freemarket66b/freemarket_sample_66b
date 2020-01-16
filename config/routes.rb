@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update, :delete, :create, :show] do
     member do
       get :profile
+      get :card_registration
       get :user_info_register
       get :user_page
       get :logout

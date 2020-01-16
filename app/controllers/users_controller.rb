@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def card_registration
+    @user = User.find(params[:id])
+  end
+
   def user_info_register
     @user = User.find(params[:id])
   end
