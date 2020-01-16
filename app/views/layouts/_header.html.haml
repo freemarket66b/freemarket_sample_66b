@@ -9,11 +9,11 @@
     .top__header__menu
       .top__header__menu__left
         .top__header__menu__left__category
-          = link_to "https://www.mercari.com/jp/category/", class: "category" do
+          = link_to "#", class: "category" do
             = fa_icon "list"
             カテゴリーから探す
         .top__header__menu__left__brand
-          = link_to "https://www.mercari.com/jp/brand/", class: "brand" do
+          = link_to "#", class: "brand" do
             = fa_icon "tag"
             ブランドから探す
       - if user_signed_in?
