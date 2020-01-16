@@ -1,38 +1,45 @@
-.user_info_register{
-  padding-top: 40px;
+.user-info {
+  padding-top: 80px;
   padding-bottom: 20px;
   width: 100%;
   background: #f5f5f5;
   text-align: center;
-  .both-content{
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+  font-size: 14px;
+  &__content{
     display:inline-block;
     position: relative;
-    .info_contents{
+    &__head {
       text-align: left;
       width: 700px;
       float:right;
       background-color: #fff;
-      &__head{
+      &__title {
         padding: 8px 24px;
         text-align: center;
         font-weight: bold;
         font-size: 24px;
         border-bottom: 1px solid #f5f5f5;
       }
-      .edit_user{
+      .edit_user {
         text-align: left;
         padding: 64px;
-        .info_content{
-          margin: 8px 0 0;
-          line-height: 1.5;
-        }
-          .text-right{
+        .user-info__content__msg-right {
             text-align: right;
-            margin: 40px 0 0;
-            .link{
+            a {
               color: #0099e8;
               text-decoration: none;
             }
+            i {
+              color: #0099e8;
+              text-decoration: none;
+              font-size: 18px;
+            }
+          }
+          p.show-data {
+            font-size: 14px;
+            font-weight: normal;
+            margin-top: 8px;
           }
         .form-group{
           margin: 40px 0 0;
@@ -61,21 +68,13 @@
             font-size: 16px;
             margin-top: 8px;
             }
-              .select-default{
-                height: 48px;
-                width: 76px;
-                background-color: #fff;
-                font-weight: none;
-                border: 1px solid #ccc;
-              }
           .pre-wrap{
             width: 100%;
-          #user_prefectures{
+          .select-default{
             height: 48px;
             font-weight: normal;
             display: block;
             width: 100%;
-            padding-left: 16px;
             border-radius: 4px;
             border: 1px solid #ccc;
             background: #fff;
@@ -88,10 +87,6 @@
         margin: 0 2px;
         left: 100px;
       }
-      .info_link{
-        color: #0099e8;
-        text-decoration: none;
-        }
       .form-info-text{
         font-weight: normal;
         margin: 8px 0 0;
@@ -114,6 +109,19 @@
       }
         .btn-red{
           @include submit-btn-long;
+        }
+        .user-info__content__bottom__msg-right {
+          text-align: right;
+          padding-top: 40px;
+          a {
+            color: #0099e8;
+            text-decoration: none;
+          }
+          i {
+            color: #0099e8;
+            text-decoration: none;
+            font-size: 18px;
+          }
         }
     }
   }
