@@ -11,6 +11,7 @@
       width: 700px;
       float:right;
       padding: 40px 16px;
+      background-image: url("my-page-背景.png");
       background-color: #fff;
       &__head{
         font-size: 24px;
@@ -19,14 +20,14 @@
         padding: 8px 0 8px;
       }
     .setting-profile-icon{
-      background-color: #FEECD0;
+      background-color: whitesmoke;
       padding: 72px 0 24px;
       text-align: center;
       .wrapper{
         width: 100%;
         display: inline-flex;
         justify-content: center;
-        background-color: #FEECD0;
+        background-color: whitesmoke;
         .icon-image{
           .prof-photo{
             border-radius: 50%;
