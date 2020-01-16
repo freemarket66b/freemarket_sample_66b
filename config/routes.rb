@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users,controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   
   root "items#index"
-  resources :items
+  resources :items do
+    collection do
+      get :confirmation
+    end
+  end
   
   resources :users, only: [:edit, :update, :delete, :create, :show] do
     member do

@@ -17,6 +17,10 @@ end
     end
   end
 
+  def confirmation
+    @item = Item.new
+  end
+
   def show
   end
 

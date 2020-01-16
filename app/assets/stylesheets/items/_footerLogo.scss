@@ -1,0 +1,13 @@
+.body{
+  &__footer{
+    width: 456px;
+    height: 290px;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F5F5F5;
+    &__logo{
+      margin: 25px 0px;
+    }
+  }
+}

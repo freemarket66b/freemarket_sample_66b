@@ -1,0 +1,141 @@
+.body{
+  min-height: 100%;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1;
+  background: rgb(245, 245, 245);
+  &__content{
+    width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro'-700;
+    font-weight: 700;
+    font-style: normal;
+    line-height:33px;
+    &__title{
+      padding: 40px;
+      border-top: 1px solid #eee;
+      padding: 52px 16px;
+      font-size: 30px;
+      text-align: center;
+      font-family: inherit;
+    }
+    &__itemImageAndName{
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 100px;
+      border-top: 1px solid #eee;
+      &__image{
+
+      }
+      &__name{
+        h1{
+          font-size: 20px;
+          font-weight: 400;
+        }
+        h2{
+          font-weight: 600;
+          line-height: 5;
+        }
+      }
+    }
+    &__buyInfo{
+      line-height: inherit;
+      width: 100%;
+      margin: 0 auto;
+      &__formBox{
+        a{
+          text-decoration: none;
+          color: #0099e8;
+          font-weight: 300;
+          font-size: 18px;
+        }
+        margin: 0px 180px;
+        &__pay{
+          border-top: 1px solid #eee;
+          &__titleAndprice{
+            padding: 50px 0px 0px 0px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            &__title{
+              padding: 0;
+              text-align: left;
+            }
+          }
+          &__pointUse{
+            padding: 25px 0;
+            color: #CDCBCB;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            i{
+              color: #CDCBCB;
+            }
+          }
+        }
+        &__cardInfo{
+          padding: 50px 0px 20px 0px;
+          border-top: 1px solid #eee;
+          &__payWay{
+            &__titleAndLink{
+              
+              font-size: 19px;
+              display: flex;
+              justify-content: space-between;
+                &__title{
+              }
+            }
+          }
+          &__cardNumber{
+            padding: 10px 0 10px 0;
+            font-size: 17px;
+          }
+        }
+        &__adressInfo{
+          border-top: 1px solid #eee;
+          padding: 50px 0px 20px 0px;
+          &__titleAndLink{
+            font-size: 19px;
+            display: flex;
+            justify-content: space-between;
+            &__title{
+
+            }
+            &__link{
+
+            }
+          }
+          &__zipInfo{
+            padding: 10px 0 10px 0;
+            font-size: 17px;
+            font-weight: 300;
+          }
+        }
+        &__buyBottunArea{
+          border-top: 1px solid #eee;
+          padding: 20px 0px 50px 0px;
+          &__buyButton{
+            #btn{
+              margin: 40px 0 0;
+              font-weight: 300;
+              background: #ea352d;
+              border: 1px solid #ea352d;
+              color: #fff;
+              display: block;
+              width: 100%;
+              line-height: 60px;
+              font-size: 20px;
+              transition: all ease-out .3s;
+              cursor: pointer;
+              text-align: center;
+              outline: 0;
+              border-style: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
