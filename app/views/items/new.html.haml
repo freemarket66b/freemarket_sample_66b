@@ -13,7 +13,7 @@
             %p
               最大10枚までアップロードできます
           .body__content__formArea__itemImage__imagebox
-            = form.file_field :image, class:"post" ,style: "display:none;"
+            = form.file_field :image, class:"post" 
             .body__content__formArea__itemImage__imagebox__choice_box
               ドラック＆ドロップまたはクリックしてファイルをアップロード
         .body__content__formArea__itemNameAndExplanation
@@ -38,12 +38,12 @@
               必須
             .body__content__formArea__itemDetail__formBox__categoryForm
               %i 
-              = form.select :category , [ ["sampleCategory",1], ["sampleCategory", 2]],prompt: "---",class:"categoty" 
+              = form.collection_select :category_id, Category.where(ancestry: nil) ,:id,:name,prompt:"---"
             商品の状態
             %span
               必須
             .body__content__formArea__itemDetail__formBox__statusForm
-              = form.select :status , [ ["sampleStatus",1], ["sampleStatus", 2]],prompt: "---" ,class:"status"
+              = form.select :status , [ ["新品、未使用",1], ["未使用に近い", 2] ,["目立った傷や汚れなし", 3] ,["やや傷や汚れあり", 4] ,["傷や汚れあり", 5] ,["全体的に状態が悪い", 6]],prompt: "---" ,class:"status"
         .body__content__formArea__itemShipping
           .body__content__formArea__itemShipping__title
             配送について

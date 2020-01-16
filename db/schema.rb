@@ -30,14 +30,13 @@ ActiveRecord::Schema.define(version: 20200109072106) do
     t.integer  "price",         null: false
     t.string   "brand"
     t.integer  "category_id"
-    t.integer  "saler_id_id",   null: false
-    t.integer  "buyer_id_id"
+    t.integer  "saler_id",      null: false
+    t.integer  "buyer_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.index ["buyer_id_id"], name: "index_items_on_buyer_id_id", using: :btree
+    t.index ["buyer_id"], name: "index_items_on_buyer_id", using: :btree
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
-    t.index ["explanation"], name: "index_items_on_explanation", using: :btree
-    t.index ["saler_id_id"], name: "index_items_on_saler_id_id", using: :btree
+    t.index ["saler_id"], name: "index_items_on_saler_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -82,6 +81,6 @@ ActiveRecord::Schema.define(version: 20200109072106) do
   end
 
   add_foreign_key "items", "categories"
-  add_foreign_key "items", "users", column: "buyer_id_id"
-  add_foreign_key "items", "users", column: "saler_id_id"
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "saler_id"
 end
