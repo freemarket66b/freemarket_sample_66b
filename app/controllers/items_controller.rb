@@ -5,8 +5,12 @@ end
 
 
   def new
+    @parent_array = []
     @item = Item.new
-    @parents = Category.order("id ASC").limit(13)
+    @parents = Category.where(ancestry: nil)
+    @parents.each do |parent|
+      @parent_array = parent.name
+    end
   end
 
 
@@ -17,8 +21,6 @@ end
     if @item.save
       redirect_to root_path
     end
-  else
-    render "confirmation"
   end
 
   def confirmation
@@ -34,7 +36,7 @@ end
   private
 
   def item_params
-    params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id).merge(saler_id_id:current_user.id)
+    params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id).merge(saler_id:current_user.id)
   end
 
 end

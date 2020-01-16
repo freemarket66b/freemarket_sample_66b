@@ -15,7 +15,6 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.references :buyer,    foreign_key: { to_table: :users }
       t.timestamps
 
-      remove_index :items, column: :explanation 
     end
   end
 end
