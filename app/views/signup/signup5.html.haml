@@ -48,10 +48,16 @@
               %span.must-content
                 必須
               = f.text_field :number, maxlength: "16", type: "text", id: "card_number",  placeholder: "半角数字のみ"
-              =image_tag "credit/iconfinder_visa-straight_38613.png"
-              =image_tag "credit/iconfinder_mastercard-straight_38603.png"
-              =image_tag "credit/iconfinder_american-express-straight_38591.png"
-              =image_tag "credit/iconfinder_discover-straight_38599.png"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/visa.svg?3649802486", width:"45",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?3649802486", width:"35",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?3649802486", width:"35",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?3649802486", width:"35",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?3649802486", width:"35",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/dinersclub.svg?3649802486", width:"35",height:"25x"
+              =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/discover.svg?3649802486", width:"35",height:"25x"
+              
+              
+
             .form-group-credit
               %label.prefecture-new
                 有効期限
