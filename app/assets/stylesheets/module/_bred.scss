@@ -1,0 +1,17 @@
+.breadcrumbs {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.18)0px 2px 4px;
+  z-index: 3;
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  .content-bread {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding-top: 8px;
+  }
+  a {
+    text-decoration: none;
+    color: #333
+  }
+}
