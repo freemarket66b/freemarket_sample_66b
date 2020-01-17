@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20200116065643) do
     t.integer  "region",        null: false
     t.integer  "shipping_date", null: false
     t.integer  "price",         null: false
+    t.string   "image",         null: false
     t.string   "brand"
     t.integer  "category_id"
     t.integer  "saler_id",      null: false
