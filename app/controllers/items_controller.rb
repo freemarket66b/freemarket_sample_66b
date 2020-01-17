@@ -16,6 +16,7 @@ end
 
 
   def create
+    binding.pry
     @item = Item.new(item_params)
     @item.save
     if @item.save
@@ -36,7 +37,7 @@ end
   private
 
   def item_params
-    params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id).merge(saler_id:current_user.id)
+    params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id,:image).merge(saler_id:current_user.id)
   end
 
 end
