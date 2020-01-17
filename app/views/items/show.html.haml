@@ -98,7 +98,7 @@
         送料込み
     
     .item-box-container__item-box__item-buy-btn
-      = link_to '#' , class: 'item-buy-btn' do
+      = link_to confirmation_items_path , class: 'item-buy-btn' do
         購入画面に進む
       
     .item-box-container__item-box__item-description
@@ -345,6 +345,6 @@
         = link_to '#' , class: 'mercari-btn' do
           メルカリ>
       .item-box-container__bread-crumbs-content__brand-btn
-        ニット　セーター　NIKE
+        ニット セーター NIKE
   
   = render "layouts/footer"
