@@ -1,5 +1,5 @@
 .body-side
-  =render "devise/shared/login-header"
+  =render "devise/shared/header-login"
   -# - breadcrumb :edit
   -# = render "layouts/breadcrumbs"
   .parent
@@ -9,7 +9,7 @@
         %h2 クレジットカード情報入力
       .credit-box__body
         .push-box
-          =form_with model: @post, local: true do |f| 
+          =form_for "#" do |f| 
             .formbox
               .form-group-credit
                 %label.yubinNum-new
