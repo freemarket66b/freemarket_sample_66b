@@ -1,9 +1,13 @@
-= render "layouts/header"
-.container
-  .container__sidebar
-    = render "layouts/side-barMypage"
-  .container__credit
-    = render "users/credit"
-= render "items/sell-btn"
-= render "layouts/footer"
+.body-side
+  = render "layouts/header"
+  - breadcrumb :edit
+  = render "layouts/breadcrumbs"
+  
+  .container
+    .container__sidebar
+      = render "layouts/side-barMypage"
+    .container__credit
+      = render "users/credit"
+  = render "items/sell-btn"
+  = render "layouts/footer"
   
