@@ -24,7 +24,7 @@
           %li.main__items__box__list
             = link_to "items/#{item.id}" do
               .main__items__box__list-image
-                = image_tag "https://static.mercdn.net/item/detail/orig/photos/m85067304817_1.jpg?1579068717"
+                = image_tag "#{item.image}"
                 .main__items__box__list-price
                   %span ¥
                   = item.price.to_s(:delimited)
@@ -32,5 +32,4 @@
                 = item.name
 
   = render "sell-btn"
-                    
 = render "layouts/footer"

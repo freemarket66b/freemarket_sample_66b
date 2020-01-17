@@ -16,7 +16,6 @@ end
 
 
   def create
-    binding.pry
     @item = Item.new(item_params)
     @item.save
     if @item.save
