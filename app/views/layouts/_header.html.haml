@@ -1,7 +1,7 @@
 %header
   .top__header
     .top__header__upper
-      = link_to image_tag("fmarket_logo_red", alt: "", class: "top__header__upper__logo"), root_path
+      = link_to image_tag("fmarket_logo_red.svg", alt: "", class: "top__header__upper__logo"), root_path
       = form_for '#' do |f|
         = f.text_field :keyword, type: "search", placeholder: "何かお探しですか？", value: "", class: "top__header__upper__search", name: "keyword", id: ""
         = f.button class: "search-btn" do
