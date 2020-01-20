@@ -31,8 +31,7 @@
               = fa_icon "check"
               ToDoリスト
           .top__header__menu__right__my-page
-            = link_to "/users/#{current_user.id}/" do
-              = image_tag asset_path("mig.jpeg"）
+            = link_to user_path(current_user.id), class: "menu-link" do             
               マイページ
       - else
         .top__header__menu__right
