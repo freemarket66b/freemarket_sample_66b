@@ -28,6 +28,8 @@ end
   end
 
   def show
+    @item = Item.find(params[:id])
+    @others = Item.all
   end
 
   def buy
