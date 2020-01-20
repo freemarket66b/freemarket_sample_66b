@@ -7,7 +7,7 @@ end
 
   def new
     @parent_array = []
-    @item = Item.new
+    @item = Item.new(item_params)
     @parents = Category.where(ancestry: nil)
     @parents.each do |parent|
     @parent_array = parent.name
