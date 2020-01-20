@@ -32,6 +32,13 @@ end
     @others = Item.all
   end
 
+  def destroy
+    if @product.destroy
+      redirect_to myitem_item_path if user_signed_in? && current_user.id == @item.user_id
+    else
+      render :my_item_detail
+    end
+  end
   def buy
   end
 
