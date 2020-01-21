@@ -22,7 +22,9 @@
   has_many :saling_items, -> { where(“buyer_id is NULL”) }, foreign_key: “saler_id”, class_name: “Item”
   has_many :sold_items, -> { where(“buyer_id is not NULL”) }, foreign_key: “saler_id”, class_name: “Item”
 - belongs_to :address
-- belongs_to :credit
+- has_many :sns_credentials
+- has_one :card
+
 
   ## addressesテーブル
 |Column         |Type     |Options                   |
@@ -80,14 +82,24 @@
 ・ancestry をgemでインストールする。
 
 
-## creditsテーブル
+## cardテーブル
 |Column        |Type     |Options    |
 |--------------|---------|-----------|
-|card_number   |integer  |null: false|
-|card_month    |integer  |null: false|
-|card_year     |integer  |null: false|
-|security_code |integer  |null: false|
+|user_id       |integer  |null: false, foreign_key:true|
+|card_id       |integer  |null: false, foreign_key:true|
+|customer_id   |integer  |null: false, foreign_key:true|
+|token         |integer  |null: false, foreign_key:true|
 |user          |integer  |null: false, foreign_key:true|
+
+### Association
+- belongs_to :user
+
+## sns_credentialテーブル
+|Column        |Type     |Options    |
+|--------------|---------|-----------|
+|user_id       |integer  |null: false, foreign_key:true|
+|provider      |integer  |null: false, foreign_key:true|
+|uid           |integer  |null: false, foreign_key:true|
 
 ### Association
 - belongs_to :user
