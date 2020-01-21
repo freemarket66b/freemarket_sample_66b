@@ -31,7 +31,8 @@
               = fa_icon "check"
               ToDoリスト
           .top__header__menu__right__my-page
-            = link_to user_path(current_user.id), class: "menu-link" do             
+            = link_to user_path(current_user.id), class: "menu-link" do
+              = image_tag "https://prtimes.jp/i/18131/725/resize/d18131-725-352411-27.jpg"             
               マイページ
       - else
         .top__header__menu__right
