@@ -17,32 +17,31 @@
   .main__items
     .main__items__box
       .main__items__box-tema
-        商品一覧
+        レディース新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
       %ul.main__items__list
-        - @items.each do |item|
-          %li.main__items__box__list
-            = link_to "items/#{item.id}" do
-              .main__items__box__list-image
-                = image_tag item.image
-                .main__items__box__list-price
-                  = "¥#{item.price.to_s(:delimited)}"
-              .main__items__box__list-index
-                = item.name
+        - @ladies.each do |lady|
+          = render "category",item:lady   
     .main__items__box
       .main__items__box-tema
-        商品一覧
+        メンズ新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
       %ul.main__items__list
-        - @items.each do |item|
-          %li.main__items__box__list
-            = link_to "items/#{item.id}" do
-              .main__items__box__list-image
-                = image_tag item.image
-                .main__items__box__list-price
-                  = "¥#{item.price.to_s(:delimited)}"
-              .main__items__box__list-index
-                = item.name
-
+        - @mens.each do |men|
+          = render "category",item:men         
+    .main__items__box
+      .main__items__box-tema
+        家電・スマホ・カメラ新着アイテム
+        = link_to "もっと見る ＞", class: "items-and-more"
+      %ul.main__items__list
+        - @appliances.each do |applian|
+          = render "category",item:applian
+    .main__items__box
+      .main__items__box-tema
+        おもちゃ・ホビー・グッズ新着アイテム
+        = link_to "もっと見る ＞", class: "items-and-more"
+      %ul.main__items__list
+        - @toys.each do |toy|
+          = render "category",item:toy
   = render "sell-btn"
 = render "layouts/footer"
