@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
       if @item.save
         redirect_to root_path
       else
-        redirect_to new_item_path
+        render :new      
       end
     end
   
@@ -52,7 +52,7 @@ class ItemsController < ApplicationController
     if @item.destroy
      redirect_to root_path 
     else 
-     redirect_to item_path(@item.id)
+      render :show
     end
    end
 
