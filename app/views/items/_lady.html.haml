@@ -1,0 +1,10 @@
+%ul.main__items__list
+  - @ladies.each do |lady|
+    %li.main__items__box__list
+      = link_to "items/#{lady.id}" do
+        .main__items__box__list-image
+          = image_tag lady.image
+          .main__items__box__list-price
+            = "¥#{lady.price.to_s(:delimited)}"
+        .main__items__box__list-index
+          = lady.name    
