@@ -46,6 +46,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -84,3 +85,4 @@ gem 'ancestry'
 gem 'gretel'
 gem 'bootstrap-sass'
 gem 'recaptcha', require: 'recaptcha/rails'
+gem 'kaminari'

@@ -1,7 +1,12 @@
 class ItemsController < ApplicationController
 
 def index
-  @items = Item.all
+  
+  @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC")
+  @mens = Item.where(category_id: 200).limit(10).order("created_at DESC")
+  @appliances = Item.where(category_id: 898).limit(10).order("created_at DESC")
+  @toys = Item.where(category_id: 685).limit(10).order("created_at DESC")
+  
 end
 
 
