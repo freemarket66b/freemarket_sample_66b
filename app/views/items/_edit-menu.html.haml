@@ -1,0 +1,14 @@
+.item-box-container__edit-delite-container
+  .item-box-container__edit-delite-container__box
+    .item-box-container__edit-delite-container__box__edit-btn
+      = link_to edit_item_path , class: 'edit-btn' do
+        商品の編集
+    %p
+      or
+    .item-box-container__edit-delite-container__box__restart-btn
+      = link_to '#' , class: 'restart-btn' do
+        出品を再開する
+    .item-box-container__edit-delite-container__box__delite-btn
+      = link_to '#' , class: 'delite-btn' do
+        この商品を削除する
+
