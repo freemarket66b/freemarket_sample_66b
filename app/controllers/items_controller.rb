@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
       @item = Item.new
       @parents = Category.where(ancestry: nil)
       @parents.each do |parent|
-      @parent_array = parent.name
+        @parent_array = parent.name
       end
     end
   
