@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
       if @item.save
         redirect_to root_path
       else
-        = render :new      
+        render :new      
       end
     end
   
@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
     end
   
     def update  
-      @item.update.(item_params)
+      @item.update(item_params)
     end
     
     def buy
