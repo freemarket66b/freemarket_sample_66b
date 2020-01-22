@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show,:edit,:update]
+  before_action :set_item, only: [:show,:edit,:update,:destroy]
+
   def index
     
     @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC")
@@ -25,7 +26,7 @@ class ItemsController < ApplicationController
       if @item.save
         redirect_to root_path
       else
-        render :new      
+        = render :new      
       end
     end
   
@@ -41,14 +42,13 @@ class ItemsController < ApplicationController
     end
   
     def update  
-      item.update.(item_params)
+      @item.update.(item_params)
     end
     
     def buy
     end
   
     def destroy
-    @item = Item.find(params[:id])
     if @item.destroy
      redirect_to root_path 
     else 
