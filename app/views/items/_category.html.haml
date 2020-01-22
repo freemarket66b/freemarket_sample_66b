@@ -1,0 +1,8 @@
+%li.main__items__box__list
+  = link_to "items/#{item.id}" do
+    .main__items__box__list-image
+      = image_tag item.image
+      .main__items__box__list-price
+        = "¥#{item.price.to_s(:delimited)}"
+    .main__items__box__list-index
+      = item.name    

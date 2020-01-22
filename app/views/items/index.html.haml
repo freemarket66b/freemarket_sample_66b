@@ -19,22 +19,29 @@
       .main__items__box-tema
         レディース新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
-      = render "lady"
+      %ul.main__items__list
+        - @ladies.each do |lady|
+          = render "category",item:lady   
     .main__items__box
       .main__items__box-tema
         メンズ新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
-      = render "mens"
+      %ul.main__items__list
+        - @mens.each do |men|
+          = render "category",item:men         
     .main__items__box
       .main__items__box-tema
         家電・スマホ・カメラ新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
-      = render "appliances"
+      %ul.main__items__list
+        - @appliances.each do |applian|
+          = render "category",item:applian
     .main__items__box
       .main__items__box-tema
         おもちゃ・ホビー・グッズ新着アイテム
         = link_to "もっと見る ＞", class: "items-and-more"
-      = render "toy"
-
+      %ul.main__items__list
+        - @toys.each do |toy|
+          = render "category",item:toy
   = render "sell-btn"
 = render "layouts/footer"
