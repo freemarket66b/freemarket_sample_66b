@@ -155,7 +155,7 @@
       .item-box-container__items-user-profile__user-items-container__items-box-head
         .item-box-container__items-user-profile__user-items-container__items-box-head__other
           = link_to '#' , class: 'other' do
-            ○○さんのその他の商品
+            = "#{@item.saler.nickname}さんのその他の商品"
 
 
       .item-box-container__items-user-profile__user-items-container__items-box-content

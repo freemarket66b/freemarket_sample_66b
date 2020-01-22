@@ -536,7 +536,6 @@
     width: 700px;
     height: 100%;
     margin: 0 auto;
-    // background-color: orange;
     margin-top: 35px;
     
     &__user-items-container{
@@ -565,11 +564,15 @@
         height: 100%;
         margin: 0 auto;
         display: flex;
+        justify-content: space-between;
         position: relative;
+        flex-wrap: wrap;
+        flex-direction: row;
+
         &__items-box{
           width: 220px;
           height: 330px;
-          margin: 0 20px 20px 0;
+          margin-bottom: 20px;
           
           &__photo{
             width: 220px;
