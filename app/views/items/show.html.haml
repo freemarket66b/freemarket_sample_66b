@@ -100,7 +100,7 @@
     .item-box-container__item-box__item-buy-btn
       = link_to confirmation_items_path , class: 'item-buy-btn' do
         購入画面に進む
-      
+
     .item-box-container__item-box__item-description
       = @item.explanation
     .item-box-container__item-box__item-button-container
@@ -114,7 +114,10 @@
       .item-box-container__item-box__item-button-container__item-button-right
         = link_to '#' , class: 'item-button-right' do
           あんしん・あんぜんへの取り組み
-  
+
+  -if user_signed_in? && current_user.id == @item.saler.id
+    = render "edit-menu"
+
   .item-box-container__item-detail-message
     .item-box-container__item-detail-message__message-container
       .item-box-container__item-detail-message__message-container__for-user-message
