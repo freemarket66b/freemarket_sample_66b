@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+before_action :set_item, only: [:show,:edit,:update]
 def index
   
   @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC")
@@ -33,16 +33,13 @@ end
   end
 
   def show
-    @item = Item.find(params[:id])
     @others = Item.all
   end
 
   def edit
-    item = Item.find(params[:id])
   end
 
-  def update
-    item = Item.find(params[:id])
+  def update  
     item.update.(item_params)
   end
   
@@ -55,4 +52,7 @@ end
     params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id,:image).merge(saler_id:current_user.id)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 end
