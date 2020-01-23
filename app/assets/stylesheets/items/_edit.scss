@@ -407,11 +407,20 @@
   &__edit-delite-container{
     width: 700px;
     margin: 0 auto;
+     
     &__box{
       height: 250px;
       margin: 24px 0 24px 0;
       background: #fff;
       padding: 8px 16px 8px 16px;
+
+      a{
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      
+
       &__edit-btn{
         margin: 16px 0 16px 0;
         background: #ea352d;
@@ -420,16 +429,15 @@
         width: 100%;
         line-height: 48px;      
         text-align: center;
-        a{
-          color: #fff;
-          font-size: 14px;
-          text-decoration: none;
-        }
+        
       }
       p{
         font-size: 16px;
         text-align: center;
       }
+    
+
+
       &__restart-btn{
         margin: 16px 0 16px 0;
         background: #ea352d;
@@ -438,11 +446,6 @@
         width: 100%;
         line-height: 48px;      
         text-align: center;
-        a{
-          color: #fff;
-          font-size: 14px;
-          text-decoration: none;
-        }
       }
       &__delite-btn{
         margin: 16px 0 16px 0;
@@ -452,11 +455,6 @@
         width: 100%;
         line-height: 48px;      
         text-align: center;
-        a{
-          color: #fff;
-          font-size: 14px;
-          text-decoration: none;
-        }
       }
     }
   }
