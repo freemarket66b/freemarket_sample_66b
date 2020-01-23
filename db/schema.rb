@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200120035559) do
+ActiveRecord::Schema.define(version: 20200123033007) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "ancestry"
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 20200120035559) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image",      null: false
-    t.integer  "item_id_id", null: false
+    t.integer  "item_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id_id"], name: "index_images_on_item_id_id", using: :btree
+    t.index ["item_id"], name: "index_images_on_item_id", using: :btree
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20200120035559) do
     t.integer  "region",        null: false
     t.integer  "shipping_date", null: false
     t.integer  "price",         null: false
-    t.string   "image",         null: false
     t.string   "brand"
     t.integer  "category_id"
     t.integer  "saler_id",      null: false
@@ -98,7 +97,7 @@ ActiveRecord::Schema.define(version: 20200120035559) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "images", "items", column: "item_id_id"
+  add_foreign_key "images", "items"
   add_foreign_key "items", "categories"
   add_foreign_key "items", "users", column: "buyer_id"
   add_foreign_key "items", "users", column: "saler_id"

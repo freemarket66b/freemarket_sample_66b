@@ -12,10 +12,9 @@
               必須
             %p
               最大10枚までアップロードできます
-          .body__content__formArea__itemImage__imagebox
-            = form.file_field :image, class:"post" 
-            .body__content__formArea__itemImage__imagebox__choice_box
-              ドラック＆ドロップまたはクリックしてファイルをアップロード
+          .upload__box
+            = form.file_field :image ,name: "images[image][]",class: 'sell__upload__drop-file',id: 'post_img_last',accept: "image/*",multiple: true
+            %pre.upload__box__text
         .body__content__formArea__itemNameAndExplanation
           .body__content__formArea__itemNameAndExplanation__name
             商品名
