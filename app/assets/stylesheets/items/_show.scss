@@ -27,10 +27,8 @@
     &__item-main-content{
       height: 100%;
       width: 700px;
-      // background-color: darkgray;
       margin: 16px 0px 0 0px;
       display: flex;
-      // justify-content: space-between 20px;
     
       &__item-photo{
         width: 300px;
@@ -38,6 +36,7 @@
         background-color: whitesmoke;
         
         &__top{
+          background-color: whitesmoke;
           img{
             width: 300px;
             height: 300px;
@@ -45,59 +44,14 @@
           }
         }
         &__sub{
-          background-color: rebeccapurple;
           display: flex;
           flex-wrap: wrap;
-          margin-top: -5px;
+          margin-top: -4px;
           &__sub-1{
+            img {
             height: 60px;
             width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-2{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-3{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-4{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-5{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-6{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-7{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-8{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-9{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
-          }
-          &__sub-10{
-            height: 60px;
-            width: 60px;
-            background-color: whitesmoke;
+            }
           }
         }
       }
@@ -107,7 +61,6 @@
         width: calc(700px - 330px);
         height: 420px;
         margin-left: auto;
-        // background-color: whitesmoke;
         &__table{
           height: 60px;
           width: 350px;
@@ -563,11 +516,10 @@
         }
       }
       &__items-box-content{
-        width: 700px;
+        width: 710px;
         height: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
         position: relative;
         flex-wrap: wrap;
         flex-direction: row;
@@ -575,12 +527,11 @@
         &__items-box{
           width: 220px;
           height: 330px;
-          margin-bottom: 20px;
+          margin: 8px;
           
           &__photo{
             width: 220px;
             height: 220px;
-            background-color: skyblue;
             
             a{
               color: #333;
