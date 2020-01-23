@@ -10,39 +10,15 @@
     .item-box-container__item-box__item-main-content
       .item-box-container__item-box__item-main-content__item-photo
         .item-box-container__item-box__item-main-content__item-photo__top
-          = link_to '#' , class: 'top' do
-            = image_tag @item.image, class: 'photo__top', height:'280', width:'280'
+          = image_tag @item.image, class: 'photo__top'
         .item-box-container__item-box__item-main-content__item-photo__sub
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-1
-            = link_to '#' , class: 'sub-1' do
-              = image_tag 'スニーカー2.webp', class: 'sub-1', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-2
-            = link_to '#' , class: 'sub-2' do
-              = image_tag 'スニーカー3.webp', class: 'sub-2', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-3
-            = link_to '#' , class: 'sub-3' do
-              = image_tag 'スニーカー4.webp', class: 'sub-3', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-4
-            = link_to '#' , class: 'sub-4' do
-              = image_tag 'スニーカー5.webp', class: 'sub-4', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-5
-            = link_to '#' , class: 'sub-5' do
-              = image_tag 'スニーカー6.webp', class: 'sub-5', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-6
-            = link_to '#' , class: 'sub-6' do
-              = image_tag 'スニーカー2.webp', class: 'sub-6', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-7
-            = link_to '#' , class: 'sub-7' do
-              = image_tag 'スニーカー3.webp', class: 'sub-7', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-8
-            = link_to '#' , class: 'sub-8' do
-              = image_tag 'スニーカー4.webp', class: 'sub-8', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-9
-            = link_to '#' , class: 'sub-9' do
-              = image_tag 'スニーカー5.webp', class: 'sub-9', height:'60', width:'60'
-          .item-box-container__item-box__item-main-content__item-photo__sub__sub-10
-            = link_to '#' , class: 'sub-10' do
-              = image_tag 'スニーカー6.webp', class: 'sub-10', height:'60', width:'60'
+          -# - item.images.each do |i|
+          -#   .item-box-container__item-box__item-main-content__item-photo__sub__sub-1
+          -#     = image_tag i.image
+          -# 複数画像投稿が実装できるようになれば使う記述
+                   
+          
+          
       .item-box-container__item-box__item-main-content__item-detail
         .item-box-container__item-box__item-main-content__item-detail__table
           .item-box-container__item-box__item-main-content__item-detail__table__colmun-left
