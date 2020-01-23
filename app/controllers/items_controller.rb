@@ -1,14 +1,13 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show,:edit,:update,:destroy]
 
-  def index
-    
-    @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC")
-    @mens = Item.where(category_id: 200).limit(10).order("created_at DESC")
-    @appliances = Item.where(category_id: 898).limit(10).order("created_at DESC")
-    @toys = Item.where(category_id: 685).limit(10).order("created_at DESC")
-    
-  end
+    def index  
+      @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC")
+      @mens = Item.where(category_id: 200).limit(10).order("created_at DESC")
+      @appliances = Item.where(category_id: 898).limit(10).order("created_at DESC")
+      @toys = Item.where(category_id: 685).limit(10).order("created_at DESC")
+      
+    end
   
   
     def new
@@ -42,7 +41,11 @@ class ItemsController < ApplicationController
     end
   
     def update  
-      @item.update(item_params)
+      if @item.update(item_params)
+        redirect_to root_path
+      else 
+        render :edit
+      end
     end
     
     def buy
