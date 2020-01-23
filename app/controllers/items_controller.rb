@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
     end
   
     def show
-      @others = Item.all
+      @others = Item.all.includes(:images)
     end
   
     def edit
