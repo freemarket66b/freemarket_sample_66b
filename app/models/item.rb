@@ -1,9 +1,9 @@
 class Item < ApplicationRecord
-  mount_uploader :image, ImageUploader
   belongs_to :saler, class_name: "User" 
   belongs_to :buyer, class_name: "User",optional: true
   belongs_to :category,optional: true
-  has_many :images
+  has_many :images, dependent: :destroy
+  accepts_nested_attributes_for :images, allow_destroy: true
 
   enum region:{
     北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,

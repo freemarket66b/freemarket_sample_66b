@@ -36,9 +36,7 @@
     &__formArea{
       border-top: 1px solid #eee;
       &__itemImage{
-        width: 620px;
         padding: 40px;
-        padding: 60px;
         &__title{
           font-size:19px;
           span{
@@ -55,18 +53,15 @@
             font-size: 17px;
           }
         }
-        &__imagebox{
+        .upload__box{
           position: relative;
           height: 300px;
           width: 100%;
-          margin-top: 25px;
-          margin-left:60px;
           .post{
             position: absolute;
             height: 300px;
             width: 100%;
             cursor: pointer;
-            background-color: aqua;
           }
           &__choice_box{
             position: absolute;
