@@ -37,7 +37,8 @@ class ItemsController < ApplicationController
     end
   
     def show
-      @others = Item.all.includes(:images)
+      saler_user = Item.find(params[:id]).saler
+      @others = Item.where(saler_id: saler_user).where.not(id: params[:id]).includes(:images).limit(6).order("created_at DESC")
     end
   
     def edit
@@ -72,4 +73,3 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
     end
   end
-  
