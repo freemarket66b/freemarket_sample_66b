@@ -76,7 +76,7 @@
               %span.must-content
                 必須
               .select-prefectures
-                = f.collection_select :prefectures, Prefecture.all, :id, :name
+                = f.select :prefectures ,  Item.regions.keys, {prompt: "---"}
               - if @user.errors.any?
                 %p.error-message 都道府県を選択して下さい
             .form-group

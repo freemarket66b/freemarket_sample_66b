@@ -5,12 +5,13 @@
       購入内容の確認
     .body__content__itemImageAndName
       .body__content__itemImageAndName__image
-        = image_tag "sample.jpeg", height:"120", width:"100"
+        - @item.images.first(1).each do |i|
+          = image_tag i.image, height:"120", width:"100"
       .body__content__itemImageAndName__name
         %h1
-          7つの習慣 成功には原則があった
+          = @item.name
         %h2
-          ¥640 （税込）送料込み
+          = "¥#{@item.price.to_s(:delimited)}（税込）#{@item.postage.sub(/\(.*/, '')}"
     .body__content__buyInfo
       .body__content__buyInfo__formBox
         .body__content__buyInfo__formBox__pay
@@ -18,7 +19,7 @@
             .body__content__buyInfo__formBox__pay__titleAndprice__title
               支払金額
             .body__content__buyInfo__formBox__pay__titleAndprice__price
-              ¥640
+            = "¥#{@item.price.to_s(:delimited)}"
           .body__content__buyInfo__formBox__pay__pointUse
             = fa_icon 'square'
             ポイントを使用 (所持ポイント: P0)
@@ -31,12 +32,13 @@
                 = link_to "#" do
                   変更する
           .body__content__buyInfo__formBox__cardInfo__cardNumber
-            %h3
-              クレジットカード
-            %h4
-              ************2275
-            %h5
-              有効期限 09 / 21
+            %label 登録クレジットカード情報
+            %br
+            = "**** **** **** " + @default_card_information.last4
+            %br
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
           .body__content__buyInfo__formBox__cardInfo__logo
             = image_tag "logo_visa.gif", width:"59",height:"29x"
         .body__content__buyInfo__formBox__adressInfo
@@ -48,16 +50,14 @@
                 変更する
           .body__content__buyInfo__formBox__adressInfo__zipInfo
             %h6
-              〒181-0015
+              = "〒#{current_user.postal_code}"
             %h7
-              東京都 三鷹市 大沢 3-10-2 国際基督教大学 カナダハウス
+              = "#{current_user.prefectures} #{current_user.city} #{current_user.address} #{current_user.building_name}"
             %p
-              いわさ よしき
+              = "#{current_user.last_name} #{current_user.first_name}"
 
         .body__content__buyInfo__formBox__buyBottunArea
-          = form_for @item do |form|
+          = link_to done_purchase_path(current_user.id) do
             .body__content__buyInfo__formBox__buyBottunArea__buyButton
-              -# = form.text_field :buyer_id_id ,value:"#{current_user.id}" ,type:"hidden"
-              = form.submit value:"購入する", id:"btn"
-
+              購入する
   = render 'items/footerLogo'
