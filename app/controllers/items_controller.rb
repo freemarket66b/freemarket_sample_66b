@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
   
     def confirmation
       card = Card.where(user_id: current_user.id).first
-      Payjp.api_key = ENV["PAYJP_KEY"]
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       Payjp::Charge.create(
         amount: @item.price,
         card: params['payjp-token'],
