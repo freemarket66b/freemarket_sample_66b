@@ -3,10 +3,10 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show,:edit,:update,:destroy, :confirmation]
 
     def index  
-      @ladies = Item.where(category_id: 1,).where.not(buyer_id: nil).limit(10).order("created_at DESC")
-      @mens = Item.where(category_id: 200).where.not(buyer_id: nil).limit(10).order("created_at DESC")
-      @appliances = Item.where(category_id: 898).where.not(buyer_id: nil).limit(10).order("created_at DESC")
-      @toys = Item.where(category_id: 685).where.not(buyer_id: nil).limit(10).order("created_at DESC")
+      @ladies = Item.where(category_id: 1,).where.not(buyer_id: nil).limit(10).order("created_at DESC").includes(:images)
+      @mens = Item.where(category_id: 200).where.not(buyer_id: nil).limit(10).order("created_at DESC").includes(:images)
+      @appliances = Item.where(category_id: 898).where.not(buyer_id: nil).limit(10).order("created_at DESC").includes(:images)
+      @toys = Item.where(category_id: 685).where.not(buyer_id: nil).limit(10).order("created_at DESC").includes(:images)
       
     end
   
