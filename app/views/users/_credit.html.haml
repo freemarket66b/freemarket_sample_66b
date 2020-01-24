@@ -3,14 +3,14 @@
     %h2 支払い方法
   .credit-box__body
     .push-box
-      = form_for "#" do |f|
-        .formbox
-          .form-group-credit
+      .formbox
+        .form-group-credit
+          = form_tag(pay_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
             %label.yubinNum-new
               カード番号
             %span.must-content
               必須
-            = f.text_field :number, maxlength: "16", type: "text", id: "card_number",  placeholder: "半角数字のみ"
+            = text_field_tag "number", "", class: "number", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
             =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/visa.svg?3649802486", width:"45",height:"25x"
             =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?3649802486", width:"35",height:"25x"
             =image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?3649802486", width:"35",height:"25x"
@@ -31,8 +31,8 @@
               セキュリティコード
             %span.must-content
               必須
-            = f.text_field :cvc, maxlength: "4", id: "cvc", placeholder: "カード背面4桁もしくは3桁の番号"
-          = f.submit "次へ進む", class: "go-ahead", id: "token_submit"
+            = text_field_tag "cvc", "", class: "cvc", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
+          = submit_tag "追加する", id: "token_submit"
           =link_to "", class: "link-for-user-info" do
             カード裏面の番号とは？
             =fa_icon'chevron-right'
