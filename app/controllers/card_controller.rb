@@ -2,7 +2,7 @@ class CardController < ApplicationController
   require "payjp"
 
   def new
-    redirect_to root_path if @card.present?
+    redirect_to action: "show" if @card.present?
   end
 
   def pay #payjpとCardのデータベース作成を実施します。
@@ -45,6 +45,7 @@ class CardController < ApplicationController
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
+      redirect_to root_path
     end
   end
 end
