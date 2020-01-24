@@ -1,7 +1,7 @@
 .sidebar-body
   .side-bar-box
     %ul.sidebar-list-1
-      = link_to user_path, class: "side-link-text" do
+      = link_to user_path(current_user.id), class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             マイページ
@@ -49,13 +49,13 @@
             出品した商品-売却済
           .icon
             =fa_icon'chevron-right'
-      = link_to user_path, class: "side-link-text" do
+      = link_to user_path(current_user.id), class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             購入した商品-取引中
           .icon
             =fa_icon'chevron-right'
-      = link_to user_path, class: "side-link-text" do
+      = link_to user_path(current_user.id), class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             購入した商品-過去の取引
@@ -103,7 +103,7 @@
     %h3
       設定
     %ul.sidebar-list-1
-      = link_to profile_user_path, class: "side-link-text" do
+      = link_to profile_user_path(current_user.id) , class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             プロフィール
@@ -115,7 +115,7 @@
             発送元・お届け先住所変更
           .icon
             =fa_icon'chevron-right'
-      = link_to card_registration_user_path, class: "side-link-text" do
+      = link_to new_card_path, class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             支払い方法
@@ -127,7 +127,7 @@
             メール/パスワード
           .icon
             =fa_icon'chevron-right'
-      = link_to user_info_register_user_path, class: "side-link-text" do
+      = link_to user_info_register_user_path(current_user.id) , class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             本人情報
@@ -139,7 +139,7 @@
             電話番号の確認
           .icon
             =fa_icon'chevron-right'
-      = link_to logout_user_path, class: "side-link-text" do
+      = link_to logout_user_path(current_user.id) , class: "side-link-text" do
         %li.side-bar-links
           .side-link-text
             ログアウト
