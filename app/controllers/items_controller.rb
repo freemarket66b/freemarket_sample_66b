@@ -1,4 +1,9 @@
 class ItemsController < ApplicationController
+
+  
+  require 'payjp'
+
+
   before_action :set_item, only: [:show,:edit,:update,:destroy]
 
     def index  
@@ -35,6 +40,21 @@ class ItemsController < ApplicationController
     def confirmation
       @item = Item.new
     end
+
+    def purchase
+      card = Card.where(user_id: current_user.id).first
+      item = Item.find(params[:id])
+      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      Payjp::Charge.create(
+        amount: item.price,
+        card: params['payjp-token'],
+        currency: 'jpy',
+        customer: card.customer_id
+      )
+      item.save!
+      redirect_to done_product_path
+    end
+
   
     def show
       saler_user = Item.find(params[:id]).saler
