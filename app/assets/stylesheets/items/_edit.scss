@@ -27,12 +27,8 @@
     &__item-main-content{
       height: 100%;
       width: 700px;
-      // background-color: darkgray;
       margin: 16px 0 0;
-
       display: flex;
-      // justify-content: space-between 20px;
-    
       &__item-photo{
         width: 300px;
         height: 300px;
@@ -44,7 +40,6 @@
         &__sub{
           min-width: 300px;
           max-width: 300px;
-          background-color: rebeccapurple;
           display: flex;
           flex-wrap: wrap;
           &__sub-1{
@@ -105,7 +100,6 @@
         width: calc(700px - 330px);
         height: 420px;
         margin-left: auto;
-        // background-color: whitesmoke;
         &__table{
           height: 60px;
           width: 350px;
