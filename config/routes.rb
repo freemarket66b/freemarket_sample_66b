@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'purchase/index'
+
+  get 'purchase/done'
+
+  get 'card/new'
+
+  get 'card/show'
+
   devise_for :users,controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   
   root "items#index"
@@ -30,6 +38,15 @@ Rails.application.routes.draw do
       post "done"
     end
   end
+
+  resources :card, only: [:new, :show, :edit, :update, :destroy] do
+    collection do
+      post 'show', to: 'card#show'
+      post 'pay', to: 'card#pay'
+      post 'delete', to: 'card#delete'
+    end
+  end
+
 
   
 

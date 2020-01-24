@@ -7,17 +7,7 @@ class Item < ApplicationRecord
 
 
 
-  with_options presence: true do
-    validates :name
-    validates :explanation
-    validates :status
-    validates :delivery_type
-    validates :postage
-    validates :region
-    validates :shipping_date
-    validates :price
-    validates :brand
-  end
+  
 
 
   enum region:{
