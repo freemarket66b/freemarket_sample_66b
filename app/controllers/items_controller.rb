@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   require 'payjp'
 
 
-  before_action :set_item, only: [:show,:edit,:update,:destroy]
+  before_action :set_item, only: [:show,:edit,:update,:destroy, :confirmation]
 
     def index  
       @ladies = Item.where(category_id: 1).limit(10).order("created_at DESC").includes(:images)
@@ -38,7 +38,12 @@ class ItemsController < ApplicationController
     end
   
     def confirmation
-      @item = Item.new
+      @item = Item.update(buyer_id: current_user.id)
+      if true
+        redirect_to purchase_index_path
+      else
+        render :confirmation
+      end
     end
 
     def purchase

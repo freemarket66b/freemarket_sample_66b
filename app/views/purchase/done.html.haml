@@ -1,3 +1,8 @@
-%h2 購入が完了しました！
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
+= render "devise/shared/header-login"
+
+.parchese-done
+  %h2 ご購入ありがとうございます！
+  = link_to root_path, class: "return" do
+    商品画面に戻る
+
+= render "devise/shared/footer-login"

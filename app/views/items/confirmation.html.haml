@@ -58,7 +58,6 @@
           = form_for @item do |form|
             .body__content__buyInfo__formBox__buyBottunArea__buyButton
               -# = form.text_field :buyer_id_id ,value:"#{current_user.id}" ,type:"hidden"
-              = form.submit value: "購入する", id:"btn"
-            
+              = form.submit value:"購入する", id:"btn"
 
   = render 'items/footerLogo'
