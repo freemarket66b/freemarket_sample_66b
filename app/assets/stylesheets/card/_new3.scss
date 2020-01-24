@@ -1,0 +1,172 @@
+.card_registration_wrapper__main{
+  width: 100vw;
+  background: #f5f5f5;
+  &__container{
+    margin: 0 auto;
+    background: #fff;
+    max-width: 480px;
+    padding-bottom: 50px;
+    &__top{
+      font-size: 22px;
+      font-weight: bold;
+      padding: 32px;
+      line-height: 33px;
+      text-align: center;
+      border-bottom: 1px solid whitesmoke;
+    }
+    &__middle{
+      width: 343px;
+      margin: 0 auto;
+      &__number{
+        width: 100%;
+        height: 76px;
+        margin-top: 50px;
+        &__left{
+          font-weight: 600;
+          font-size: 13px;
+        }
+        &__right{
+          background: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          right: 12px;
+        }
+        &__under{
+          width: 100%;
+          height: 48px;
+          display: block;
+          margin-top: 5px;
+          &::placeholder{
+            margin-left: 30px;
+          }
+        }
+      }
+      &__expiration_1{
+        width: 100%;
+        
+        margin-top: 50px;
+        &__left{
+          font-weight: 600;
+          font-size: 13px;
+        }
+        &__right{
+          background: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          right: 12px;
+        }
+      }
+      &__expiration_2{
+        height: 120px;
+        width: 300px;
+        display: flex;
+        position: relative;
+        .card_registration_chevron1{
+          position: absolute;
+          left: 90px;
+          top: 19px;
+          color: #AAAAAA;
+        }
+        .card_registration_chevron2{
+          position: absolute;
+          right: 58px;
+          top: 19px;
+          color: #AAAAAA;
+        }
+        &__mon{
+          width: 110px;
+          height: 45px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          margin-top: 5px;
+          background-color: white;
+          padding-left: 10px;
+        }
+        &__j{
+          font-size: 13px;
+          margin-left: 10px;
+          line-height: 45px;
+        }
+        &__year{
+          width: 110px;
+          height: 45px;
+          -webkit-appearance: none;
+          margin-left: 9px;
+          cursor: pointer;
+          margin-top: 5px;
+          background-color: white;
+          padding-left: 10px;
+        }
+      }
+      &__safty{
+        width: 100%;
+        &__left{
+          font-weight: 600;
+          font-size: 13px;
+        }
+        &__right{
+          background: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          right: 12px;
+        }
+        &__number{
+          height: 48px;
+          width: 100%;
+          margin-top: 5px;
+          &::placeholder{
+            text-align: center;
+          }
+        }
+      }
+      &__add{
+        width: 100%;
+        height: 48px;
+        background-color: red;
+        margin-top: 15px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        border: 1px solid red;
+        &::placeholder{
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+  }
+  .card_registration_img{
+    margin-top: 30px;
+  }
+  .card_awesome{
+    font-size: 12px;
+    float: right;
+    color: #4689FF;
+  }
+  .next-btn {
+    margin-top: 50px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+.signup_wrapper {
+  background-color: #f5f5f5;
+}

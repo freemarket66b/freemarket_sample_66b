@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   
-  get 'purchase/index'
-
-  get 'purchase/done'
-
+  
   devise_for :users,controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
   
   root "items#index"
   resources :items do
-    collection do
+    member do
       get :confirmation
     end
   end
@@ -43,8 +40,13 @@ Rails.application.routes.draw do
     end
   end
 
-
-  
+  resources :purchase, only: [:index] do
+    collection do
+      get 'index', to: 'purchase#index'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
+    end
+  end
 
 end
 
