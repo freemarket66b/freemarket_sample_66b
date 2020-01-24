@@ -9,7 +9,12 @@
         %span.card_registration_wrapper__main__container__middle__number__right
           必須
         = text_field_tag "number", "", class: "number card_registration_wrapper__main__container__middle__number__under", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
-      %img{alt: "カード", height: "35", src: "http://manual.estore.co.jp/shared/mg_sozai/card_m_all.gif", width: "80%",class: "card_registration_img"}
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/visa.svg?2577564681", width:"49",height:"30x"
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/master-card.svg?2577564681", width:"35",height:"30x"
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/saison-card.svg?2577564681", width:"35",height:"30x"
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/jcb.svg?2577564681", width:"35",height:"30x"
+        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/card/american_express.svg?2577564681", width:"35",height:"28x"
+        
       .card_registration_wrapper__main__container__middle__expiration_1
         %span.card_registration_wrapper__main__container__middle__expiration_1__left
           有効期限
