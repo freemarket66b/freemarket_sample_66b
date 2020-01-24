@@ -38,27 +38,18 @@ class ItemsController < ApplicationController
     end
   
     def confirmation
-      @item = Item.update(buyer_id: current_user.id)
-      if true
-        redirect_to purchase_index_path
-      else
-        render :confirmation
-      end
-    end
-
-    def purchase
       card = Card.where(user_id: current_user.id).first
-      item = Item.find(params[:id])
       Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
       Payjp::Charge.create(
-        amount: item.price,
+        amount: @item.price,
         card: params['payjp-token'],
         currency: 'jpy',
         customer: card.customer_id
       )
-      item.save!
-      redirect_to done_product_path
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @default_card_information = customer.cards.retrieve(card.card_id)
     end
+
 
   
     def show
@@ -87,6 +78,7 @@ class ItemsController < ApplicationController
       render :show
     end
    end
+   
 
     private
   
