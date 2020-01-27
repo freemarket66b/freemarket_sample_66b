@@ -8,6 +8,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
+  def create
+    if params[:sns_auth] == 'true'
+      pass = Devise.friendly_token
+      params[:user][:password] = pass
+      params[:user][:password_confirmation] = pass
+    end
+    super
+  end
+
   private
   def customize_sign_up_params
     devise_parameter_sanitizer.permit :sign_up, keys: [:username, :email, :password, :password_confirmation, :remember_me]
