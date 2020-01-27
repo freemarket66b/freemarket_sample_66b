@@ -28,8 +28,6 @@ class PurchaseController < ApplicationController
   end
 
   def done
-    @item = Item.find(params[:id])
     @item.update(buyer_id: current_user.id)
   end
-
 end
