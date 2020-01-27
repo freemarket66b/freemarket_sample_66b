@@ -7,7 +7,14 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :name, :first_name, :fiest_name_kana, :last_name, :last_name_kana, :phone_number, :birthday_year, :birthday_month, :birthday_day, :prefecture, :city, :address, :postal_code, :building_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :name, :first_name, :first_name_kana, :last_name, :last_name_kana, :phone_number, :birthday_year, :birthday_month, :birthday_day, :prefecture, :city, :address, :postal_code, :building_name])
+  end
+
+  def ensure_login
+    unless user_signed_in?
+      flash[:alert] = "ログインしてください"
+      redirect_to products_path
+    end
   end
 
   def production?
@@ -20,4 +27,4 @@ class ApplicationController < ActionController::Base
     end
   end
 end
-#:nickname, :name, :first_name, :fiest_name_kana, :last_name, :last_name_kana, :phone_number, :birthday_year, :birthday_month, :birthday_day, :passwaord, :mail, :phone_number, :prefecture, :city, :address, :postal_code, :building_name, :exhibit_product, :exhibit_number, :exhibit_now, :exhibit_trading, :exhibit_sold, :points, :like,:earning, :purchase_history_id, :sales_history_id
+#:nickname, :name, :first_name, :first_name_kana, :last_name, :last_name_kana, :phone_number, :birthday_year, :birthday_month, :birthday_day, :passwaord, :mail, :phone_number, :prefecture, :city, :address, :postal_code, :building_name, :exhibit_product, :exhibit_number, :exhibit_now, :exhibit_trading, :exhibit_sold, :points, :like,:earning, :purchase_history_id, :sales_history_id

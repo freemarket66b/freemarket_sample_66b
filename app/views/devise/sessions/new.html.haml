@@ -14,12 +14,12 @@
       .login-page__sns-login__google
         = image_tag("https://quartet-communications.com/wp-content/uploads/2017/05/Google_-G-_Logo.svg_.png")
         Googleでログイン
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    .login-page__input
+  -# .login-page__input
+  -#   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       = f.email_field :email, placeholder: "メールアドレス",  value: "", class:'login-page__input__email'
       = f.password_field :password, placeholder: "パスワード", class:'login-page__input__password'
       .login-page__input__recaptcha
         = image_tag("https://i.gyazo.com/ce5541bb0a64b4d3a55f24edb0f9b140.png")
       = f.submit "ログイン", class:'login-page__input__submit'
-      = link_to 'パスワードをお忘れの方', new_user_password_path
+    = link_to 'パスワードをお忘れの方', new_user_password_path
   = render "devise/shared/footer-login"
