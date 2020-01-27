@@ -73,9 +73,15 @@
       .item-box-container__item-box__item-price-box__item-shipping-fee
         = @item.postage.sub(/\(.*/, '')
     
-    .item-box-container__item-box__item-buy-btn
+    - if user_signed_in?
       = link_to confirmation_item_path , class: 'item-buy-btn' do
-        購入画面に進む
+        .item-box-container__item-box__item-buy-btn
+          購入画面に進む
+    - else
+      = link_to new_user_session_path , class: 'item-buy-btn' do
+        .item-box-container__item-box__item-buy-btn
+          購入画面に進む
+
 
     .item-box-container__item-box__item-description
       = @item.explanation
