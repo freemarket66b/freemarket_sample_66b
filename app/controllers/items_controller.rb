@@ -24,9 +24,6 @@ class ItemsController < ApplicationController
     def create
       @item = Item.new(item_params)
       if @item.save
-        params[:images][:image].each do |image|
-          @item.images.create(image: image, item_id: @item_id)
-        end
         redirect_to root_path
       else
         render :new
@@ -79,7 +76,7 @@ class ItemsController < ApplicationController
     private
   
     def item_params
-      params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id, images_attributes:[:image]).merge(saler_id:current_user.id)
+      params.require(:item).permit(:name,:explanation,:status,:delivery_type,:postage,:region,:shipping_date,:price,:category_id, images_attributes:[:image, :_destroy, :id]).merge(saler_id:current_user.id)
     end
   
     def set_item
