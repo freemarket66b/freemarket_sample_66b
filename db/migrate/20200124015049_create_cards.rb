@@ -5,8 +5,6 @@ class CreateCards < ActiveRecord::Migration[5.0]
       t.string :customer_id
       t.string :card_id
       t.string :token
-
-
       t.timestamps
     end
   end

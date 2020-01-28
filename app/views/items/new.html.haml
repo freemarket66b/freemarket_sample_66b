@@ -8,13 +8,20 @@
         .body__content__formArea__itemImage
           .body__content__formArea__itemImage__title
             出品画像
-            %span
-              必須
-            %p
-              最大10枚までアップロードできます
-          .upload__box
-            = form.file_field :image ,name: "images[image][]",class: 'sell__upload__drop-file',id: 'post_img_last',accept: "image/*",multiple: true
-            %pre.upload__box__text
+            %span 必須
+          %p 最大5枚までアップロードできます
+          .post__drop__box__container
+            .prev-content
+            .label-content
+              %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = form.fields_for :images do |i|
+                = i.file_field :image, class: "hidden-field"
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+                %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
         .body__content__formArea__itemNameAndExplanation
           .body__content__formArea__itemNameAndExplanation__name
             商品名

@@ -8,14 +8,29 @@
         .body__content__formArea__itemImage
           .body__content__formArea__itemImage__title
             出品画像
-            %span
-              必須
-            %p
-              最大10枚までアップロードできます
-          .body__content__formArea__itemImage__imagebox
-            = form.file_field :image, class:"post" 
-            .body__content__formArea__itemImage__imagebox__choice_box
-        .body__content__formArea__itemNameAndExplanation
+            %span 必須
+          %p 最大5枚までアップロードできます
+          .post__drop__box__container
+            .prev-content
+              - @item.images.each do |image|
+                .preview-box
+                  .upper-box
+                    = image_tag image.image.url, width: "112", height: "112", alt: "preview"
+                  .lower-box
+                    .update-box
+                      %label.edit-btn 編集
+                    .delete-box
+                      .delete-btn
+                        %span 削除
+            .label-content
+              = form.label :"images_attributes_#{@item.images.length}_image", class: "label-box", id: "label-box--#{@item.images.length}" do
+                %pre.label-box__text-visible クリックしてファイルをアップロード
+            .hidden-content
+              = form.fields_for :images do |i|
+                = i.file_field :image, class: "hidden-field"
+                = i.check_box:_destroy, class: "hidden-checkbox"
+              - @item.images.length.upto(4) do |i|
+                %input{name: "item[images_attributes][#{i}][image]", id: "item_images_attributes_#{i}_image", class:"hidden-field", type:"file"}
           .body__content__formArea__itemNameAndExplanation__name
             商品名
             %span
