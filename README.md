@@ -11,11 +11,16 @@
 |birth_year     |integer  |null: false
 |birth_month    |integer  |null: false
 |birth_day      |integer  |null: false
+|postal-code    |integer  |null: false, unique: true, index: true
+|prefectures    |string   |null: false, unique: true
+|city           |string   |null: false
+|town_number    |integer  |null: false
+|building-name  |string   |null: false
+|phone_number_delivery |integer|
 |credit         |references|foreign_key: true|
 |sns_credentials_id|intger|null: false, foreign_key: true
 |icon           |string
 |introduction   |text
-
 
 ### Association
 - has_many :buyed_items, foreign_key: “buyer_id”, class_name: “Item”
@@ -25,20 +30,6 @@
 - has_many :sns_credentials
 - has_one :card
 
-
-  ## addressesテーブル
-|Column         |Type     |Options                   |
-|---------------|---------|---------------           |
-|postal-code    |integer   |null: false, unique: true, index: true
-|prefectures    |string   |null: false, unique: true
-|city           |string   |null: false
-|town_number    |integer  |null: false
-|building-name  |string   |null: false
-|phone_number_delivery |integer|
-|user           |integer  |null: false, foreign_key: true|
-
-### Association 
-- belongs_to :user
 
 ## itemsテーブル
 |Column        |Type     |Options    |
