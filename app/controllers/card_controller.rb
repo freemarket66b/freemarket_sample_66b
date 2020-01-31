@@ -19,7 +19,7 @@ class CardController < ApplicationController
       ) #念の為metadataにuser_idを入れましたがなくてもOK
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        redirect_to root_path
+        redirect_to done_signup_index_path
       else
         redirect_to root_path
       end
@@ -47,6 +47,6 @@ class CardController < ApplicationController
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
-    redirect_to root_path
+    redirect_to _signup_index_path
   end
 end
